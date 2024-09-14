@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+  - rule: Diagnóstico de autismo
+    steps:
+      - intent: diagnose_autism
+      - action: utter_diagnose_autism
+
+  - rule: Sugestões de terapia
+    steps:
+      - intent: therapy_suggestions
+      - action: utter_therapy_suggestions
+
+  - rule: Dicas de comunicação
+    steps:
+      - intent: communication_tips
+      - action: utter_communication_tips
+
+  - rule: Suporte emocional
+    steps:
+      - intent: emotional_support
+      - action: utter_emotional_support
+
+  - rule: Como lidar com crises de autismo
+    steps:
+      - intent: handle_autism_crisis
+      - action: utter_handle_autism_crisis
+
+  - rule: Handle fallback with Gemini
+    steps:
+      - intent: nlu_fallback  # Quando o modelo não reconhece a intenção
+      - action: action_ask_gemini  # Usa a API Gemini para gerar a resposta
+      
+  - rule: Responder sobre comportamento no autismo
+    steps:
+      - intent: handle_autism_behavior
+      - action: utter_handle_autism_behavior
+
+  - rule: Responder sobre suporte no dia a dia
+    steps:
+      - intent: daily_life_support
+      - action: utter_daily_life_support

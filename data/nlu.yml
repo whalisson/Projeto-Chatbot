@@ -1,0 +1,63 @@
+version: "3.1"
+nlu:
+- intent: diagnose_autism
+  examples: |
+    - Como saber se meu filho tem autismo?
+    - Meu filho pode ser autista?
+    - Quais os sinais de autismo?
+    - Como é feito o diagnóstico de autismo?
+
+- intent: therapy_suggestions
+  examples: |
+    - Que tipo de terapia pode ajudar?
+    - Quais são as melhores terapias para autismo?
+    - O que é ABA?
+    - A terapia ocupacional é indicada para autismo?
+
+- intent: communication_tips
+  examples: |
+    - Como melhorar a comunicação com meu filho?
+    - Dicas para ajudar na fala do meu filho autista.
+    - Como incentivar meu filho autista a se comunicar?
+    - O que fazer para meu filho falar mais?
+
+- intent: emotional_support
+  examples: |
+    - O que fazer se eu estiver me sentindo sobrecarregado?
+    - Estou exausta, o que posso fazer?
+    - Preciso de ajuda emocional, como lidar com isso?
+    - Como posso cuidar de mim enquanto cuido do meu filho?
+
+- intent: handle_autism_crisis
+  examples: |
+    - Filho com crise de autismo, como tratar?
+    - Como lidar com uma crise de autismo?
+    - O que fazer quando meu filho autista está em crise?
+    - Como acalmar uma criança autista em crise?
+    - Como posso ajudar meu filho durante uma crise de autismo?
+    - Meu filho está em crise, o que devo fazer?
+    
+- intent: handle_autism_behavior
+  examples: |
+    - Meu filho está com comportamentos repetitivos, isso é autismo?
+    - Como lidar com comportamentos agressivos no autismo?
+    - Por que crianças autistas têm crises?
+    - O que fazer durante uma crise de autismo?
+
+- intent: daily_life_support
+  examples: |
+    - Como posso ajudar meu filho a se comunicar melhor?
+    - Quais brinquedos são adequados para crianças com autismo?
+    - Como lidar com a transição para a escola?
+    - Existe algum suporte financeiro para crianças com autismo?
+
+- intent: nlu_fallback
+  examples: |
+    - Qual é o sentido da vida?
+    - O que é a vida?
+    - Fale sobre o universo
+    - Qual é o propósito da existência?
+    - Como funciona a gravidade?
+    - Quem descobriu o fogo?
+    - Me conte uma piada
+

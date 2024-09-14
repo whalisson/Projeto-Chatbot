@@ -1,0 +1,58 @@
+[
+  {
+    "name": "DIAGNOSTICO",
+    "pattern": "(?i)autismo"
+  },
+  {
+    "name": "DIAGNOSTICO",
+    "pattern": "(?i)diagnóstico"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)adulto"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)bebê"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)criança"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)filho"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)pais"
+  },
+  {
+    "name": "SINTOMA",
+    "pattern": "(?i)comportamentos"
+  },
+  {
+    "name": "SINTOMA",
+    "pattern": "(?i)sinais"
+  },
+  {
+    "name": "SINTOMA",
+    "pattern": "(?i)sintomas"
+  },
+  {
+    "name": "SUPORTE",
+    "pattern": "(?i)apoio"
+  },
+  {
+    "name": "SUPORTE",
+    "pattern": "(?i)suporte"
+  },
+  {
+    "name": "TRATAMENTO",
+    "pattern": "(?i)terapia"
+  },
+  {
+    "name": "TRATAMENTO",
+    "pattern": "(?i)tratamento"
+  }
+]

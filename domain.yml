@@ -1,0 +1,58 @@
+version: "3.1"
+
+intents:
+  - diagnose_autism
+  - therapy_suggestions
+  - communication_tips
+  - emotional_support
+  - nlu_fallback   # Intenção para fallback quando a confiança for baixa
+  - handle_autism_crisis
+  - handle_autism_behavior
+  - daily_life_support
+
+responses:
+  utter_diagnose_autism:
+    - text: |
+        O diagnóstico de autismo deve ser feito por um profissional de saúde especializado, 
+        como um pediatra ou neuropsicólogo. Alguns sinais podem incluir dificuldades na 
+        comunicação social e comportamentos repetitivos.
+
+  utter_therapy_suggestions:
+    - text: |
+        Existem várias terapias que podem ajudar crianças com autismo, como ABA (Análise Comportamental 
+        Aplicada), Terapia Ocupacional, Fonoaudiologia e Intervenção Comportamental. Consulte um 
+        especialista para saber o que é melhor para seu filho.
+
+  utter_communication_tips:
+    - text: |
+        Melhorar a comunicação pode ser um processo longo. Tente usar frases simples, oferecer escolhas 
+        visuais, e utilize sinais ou gestos. A terapia fonoaudiológica também pode ser bastante útil.
+
+  utter_emotional_support:
+    - text: |
+        Lidar com o autismo pode ser emocionalmente desafiador. É importante buscar apoio de grupos de 
+        pais, além de cuidar de sua saúde mental. Você não está sozinho nessa jornada.
+
+  utter_handle_autism_crisis:
+    - text: |
+        Durante uma crise de autismo, o mais importante é manter a calma. Algumas dicas incluem:
+        - Proporcionar um ambiente tranquilo e seguro.
+        - Evitar estímulos sensoriais que possam estar desencadeando a crise.
+        - Usar técnicas de conforto, como apertos suaves ou deixar a criança em um espaço seguro.
+        - Tentar identificar o que pode ter causado a crise e evitar punições.
+        Lembre-se de que cada criança é diferente, e pode ser útil conversar com um profissional especializado em comportamento para obter estratégias personalizadas.
+
+  utter_handle_autism_behavior:
+    - text: |
+        Comportamentos repetitivos e crises são comuns no autismo. Durante uma crise, é importante 
+        criar um ambiente seguro e tranquilo, evitar punições e buscar entender o que causou a crise.
+
+  utter_daily_life_support:
+    - text: |
+        Para ajudar no dia a dia de uma criança com autismo, você pode incentivar a comunicação 
+        com brinquedos interativos, fornecer uma rotina estruturada e procurar suporte especializado, 
+        incluindo suporte financeiro e escolar.
+
+actions:
+  - action_ask_gemini  # Adicionada a action para integrar com o Google Gemini
+  - action_default_fallback  # fallback padrão

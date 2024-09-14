@@ -1,0 +1,30 @@
+[
+  {
+    "name": "DIAGNOSTICO",
+    "pattern": "(?i)autismo"
+  },
+  {
+    "name": "DIAGNOSTICO",
+    "pattern": "(?i)diagnóstico"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)adulto"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)bebê"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)criança"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)filho"
+  },
+  {
+    "name": "PESSOA",
+    "pattern": "(?i)pais"
+  }
+]

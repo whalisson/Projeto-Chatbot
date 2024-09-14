@@ -1,0 +1,21 @@
+version: "3.1"
+stories:
+- story: diagnose autism
+  steps:
+  - intent: diagnose_autism
+  - action: utter_diagnose_autism
+
+- story: suggest therapy
+  steps:
+  - intent: therapy_suggestions
+  - action: utter_therapy_suggestions
+
+- story: communication tips
+  steps:
+  - intent: communication_tips
+  - action: utter_communication_tips
+
+- story: emotional support
+  steps:
+  - intent: emotional_support
+  - action: utter_emotional_support
