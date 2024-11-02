@@ -1,55 +1,152 @@
 version: "3.1"
+
 nlu:
 - intent: diagnose_autism
   examples: |
-    - Como saber se meu filho tem autismo?
-    - Meu filho pode ser autista?
-    - Quais os sinais de autismo?
-    - Como é feito o diagnóstico de autismo?
+    - Como saber se meu [filho](family_member) tem autismo?
+    - Quais os sinais de autismo em [crianças](age_group)?
+    - Como posso identificar o autismo no meu [filho](family_member)?
+    - O que devo observar em [adolescentes](age_group) para saber se tem autismo?
+    - Meu [filho](family_member) apresenta sinais de autismo, o que devo fazer?
 
 - intent: therapy_suggestions
   examples: |
-    - Que tipo de terapia pode ajudar?
     - Quais são as melhores terapias para autismo?
-    - O que é ABA?
+    - O que é [ABA](therapy_type) e como pode ajudar no autismo?
     - A terapia ocupacional é indicada para autismo?
+    - Que tipo de terapia ajuda crianças autistas?
+    - A [fonoaudiologia](therapy_type) pode ajudar meu [filho](family_member) a se comunicar melhor?
 
 - intent: communication_tips
   examples: |
-    - Como melhorar a comunicação com meu filho?
-    - Dicas para ajudar na fala do meu filho autista.
-    - Como incentivar meu filho autista a se comunicar?
-    - O que fazer para meu filho falar mais?
+    - Como melhorar a comunicação com meu [filho](family_member)?
+    - Como posso incentivar meu [filho](family_member) a falar mais?
+    - Dicas para ajudar meu [filho](family_member) com autismo a se comunicar melhor
+    - O que posso fazer para meu [filho](family_member) falar mais?
+    - Quais atividades posso usar para melhorar a comunicação de meu [filho](family_member)?
 
 - intent: emotional_support
   examples: |
-    - O que fazer se eu estiver me sentindo sobrecarregado?
-    - Estou exausta, o que posso fazer?
-    - Preciso de ajuda emocional, como lidar com isso?
-    - Como posso cuidar de mim enquanto cuido do meu filho?
+    - O que fazer quando me sinto sobrecarregado com o autismo do meu [filho](family_member)?
+    - Como posso cuidar de mim enquanto cuido do meu [filho](family_member)?
+    - Preciso de apoio emocional para lidar com o autismo do meu [filho](family_member)
+    - Quais grupos de apoio existem para pais de [crianças](age_group) autistas?
+    - Como posso encontrar ajuda emocional para mim enquanto cuido de uma criança autista?
 
 - intent: handle_autism_crisis
   examples: |
-    - Filho com crise de autismo, como tratar?
-    - Como lidar com uma crise de autismo?
-    - O que fazer quando meu filho autista está em crise?
-    - Como acalmar uma criança autista em crise?
-    - Como posso ajudar meu filho durante uma crise de autismo?
-    - Meu filho está em crise, o que devo fazer?
-    
+    - Meu [filho](family_member) está em crise, o que devo fazer?
+    - Como lidar com uma crise de autismo no meu [filho](family_member)?
+    - O que fazer durante uma crise de autismo?
+    - Como acalmar meu [filho](family_member) durante uma crise?
+    - Quais estratégias posso usar para ajudar meu [filho](family_member) em uma crise?
+
 - intent: handle_autism_behavior
   examples: |
-    - Meu filho está com comportamentos repetitivos, isso é autismo?
-    - Como lidar com comportamentos agressivos no autismo?
-    - Por que crianças autistas têm crises?
-    - O que fazer durante uma crise de autismo?
+    - Meu [filho](family_member) tem comportamentos repetitivos, isso é autismo?
+    - Como lidar com comportamentos agressivos no meu [filho](family_member)?
+    - Meu [filho](family_member) tem crises frequentes, o que fazer?
+    - Por que [crianças](age_group) com autismo têm comportamentos repetitivos?
+    - Como gerenciar comportamentos agressivos em uma crise de autismo?
 
 - intent: daily_life_support
   examples: |
-    - Como posso ajudar meu filho a se comunicar melhor?
-    - Quais brinquedos são adequados para crianças com autismo?
-    - Como lidar com a transição para a escola?
-    - Existe algum suporte financeiro para crianças com autismo?
+    - Quais brinquedos são adequados para [crianças](age_group) com autismo?
+    - Como posso ajudar meu [filho](family_member) a lidar com as rotinas diárias?
+    - O que posso fazer para facilitar o dia a dia do meu [filho](family_member)?
+    - Como posso ajudar meu [filho](family_member) a se adaptar melhor na escola?
+    - Existe algum suporte financeiro para famílias com [crianças](age_group) autistas?
+
+- intent: school_support
+  examples: |
+    - Como posso conseguir suporte para meu [filho](family_member) na escola?
+    - Quais adaptações a escola pode fazer para crianças com autismo?
+    - Como os professores podem ajudar [crianças](age_group) autistas na escola?
+    - A escola do meu [filho](family_member) está preparada para autistas?
+    - Que tipos de suporte a escola deve fornecer para alunos com autismo?
+
+- intent: diet_suggestions
+  examples: |
+    - Qual a melhor dieta para [crianças](age_group) com autismo?
+    - Que alimentos devo evitar para meu [filho](family_member) autista?
+    - Existe alguma dieta específica que ajuda no comportamento do autismo?
+    - Como a alimentação pode ajudar meu [filho](family_member) com autismo?
+    - A alimentação pode influenciar o comportamento de [adolescentes](age_group) com autismo?
+
+- intent: sensory_tips
+  examples: |
+    - Quais são os melhores brinquedos sensoriais para [crianças](age_group) autistas?
+    - O que posso usar para estimular sensorialmente meu [filho](family_member)?
+    - Como adaptar o ambiente para uma criança sensível a estímulos?
+    - Que tipos de estímulos ajudam a acalmar [crianças](age_group) autistas?
+    - Como posso ajudar meu [filho](family_member) que tem muita sensibilidade sensorial?
+
+- intent: sleep_issues
+  examples: |
+    - Meu [filho](family_member) tem dificuldade para dormir, isso é comum no autismo?
+    - Como ajudar [crianças](age_group) autistas a dormirem melhor?
+    - O autismo pode causar problemas de sono?
+    - Meu [filho](family_member) não dorme bem, como posso ajudar?
+    - Quais estratégias posso usar para melhorar o sono do meu [filho](family_member) com autismo?
+
+- intent: medication_autism
+  examples: |
+    - Quais medicamentos são usados para tratar o autismo?
+    - Existe medicação para tratar os sintomas do autismo no meu [filho](family_member)?
+    - O autismo precisa de medicação?
+    - Existem remédios para reduzir os sintomas do autismo?
+    - Quais medicamentos podem ajudar [crianças](age_group) com autismo?
+
+- intent: dealing_with_siblings
+  examples: |
+    - Como posso ajudar os irmãos do meu [filho](family_member) a entender o autismo?
+    - Como explicar o autismo para os irmãos de uma [criança](age_group) autista?
+    - O que devo dizer aos irmãos do meu [filho](family_member) sobre o autismo?
+    - Como envolver os irmãos do meu [filho](family_member) no cuidado do autismo?
+    - Quais atividades podem ajudar os irmãos do meu [filho](family_member) a interagir melhor com ele?
+
+- intent: financial_aid
+  examples: |
+    - Quais são os auxílios financeiros para [crianças](age_group) autistas?
+    - Existe algum benefício do governo para famílias com autismo?
+    - Como posso obter suporte financeiro para o tratamento do meu [filho](family_member)?
+    - Existem subsídios para o tratamento de autismo?
+    - Onde posso solicitar apoio financeiro para meu [filho](family_member) com autismo?
+
+- intent: meltdowns_vs_tantrums
+  examples: |
+    - Como diferenciar um colapso sensorial de uma birra no meu [filho](family_member)?
+    - O que é um colapso sensorial no autismo e como ele se manifesta?
+    - Meu [filho](family_member) está tendo um colapso ou uma birra?
+    - Como identificar se o comportamento do meu [filho](family_member) é um colapso ou uma birra?
+    - Quais são as diferenças entre colapsos e birras no autismo?
+
+- intent: autism_education
+  examples: |
+    - Onde posso encontrar material para aprender mais sobre autismo?
+    - Que livros sobre autismo você recomenda?
+    - Existem cursos para entender melhor o autismo?
+    - Quais recursos educacionais estão disponíveis para aprender sobre autismo?
+    - Como posso me educar mais sobre o autismo do meu [filho](family_member)?
+
+- intent: legal_rights
+  examples: |
+    - Quais são os direitos legais das [crianças](age_group) autistas?
+    - Existem leis que protegem meu [filho](family_member) com autismo?
+    - O que a legislação diz sobre crianças autistas?
+    - Quais são os direitos legais de uma [criança](age_group) autista na escola?
+    - Meu [filho](family_member) tem direito a algum benefício social por causa do autismo?
+    - O que a lei garante para pessoas autistas?
+
+- intent: ask_scientific_article
+  examples: |
+    - Quais artigos científicos existem sobre autismo?
+    - Você pode me mostrar um estudo científico sobre autismo?
+    - Existe algum artigo científico sobre autismo infantil?
+    - Pode me fornecer informações científicas sobre autismo?
+    - Quero ver um estudo recente sobre autismo.
+
+# intent fallback
 
 - intent: nlu_fallback
   examples: |
@@ -61,3 +158,1536 @@ nlu:
     - Quem descobriu o fogo?
     - Me conte uma piada
 
+# outros intents
+
+- intent: intent_1
+  examples: |
+    - O que é autismo?
+    - Como o autismo é definido?
+    - O autismo é uma condição neurológica?
+    - Quais são as características do autismo?
+    - Pode me explicar o que significa autismo?
+    - O que exatamente significa ser autista?
+    - Autismo é uma condição ou um transtorno?
+    - Qual é a definição de autismo?
+
+- intent: intent_2
+  examples: |
+    - Quais são os principais sinais de autismo?
+    - Quais são os primeiros sinais de autismo?
+    - Como posso identificar os sinais de autismo?
+    - O que devo observar para identificar o autismo?
+    - Quais comportamentos indicam que alguém é autista?
+    - Existe uma lista de sintomas para o autismo?
+    - Como sei se meu filho tem sinais de autismo?
+    - Que características são comuns em pessoas autistas?
+
+- intent: intent_3
+  examples: |
+    - Como o autismo é diagnosticado?
+    - Existe um processo específico para diagnosticar o autismo?
+    - Quais são os passos para um diagnóstico de autismo?
+    - Como médicos identificam o autismo em crianças?
+    - O diagnóstico de autismo requer exames específicos?
+    - Como é feita a avaliação para autismo?
+    - Existem testes para confirmar o autismo?
+    - Quais profissionais podem diagnosticar o autismo?
+
+- intent: intent_4
+  examples: |
+    - Quais são os tratamentos disponíveis para o autismo?
+    - Quais opções de tratamento estão disponíveis para autismo?
+    - Como posso tratar o autismo do meu filho?
+    - Existem terapias eficazes para o autismo?
+    - O autismo pode ser tratado com terapia?
+    - Quais são os métodos mais comuns de tratamento para autismo?
+    - Que tipo de suporte terapêutico existe para autismo?
+    - Autistas precisam de tratamento contínuo?
+
+- intent: intent_6
+  examples: |
+    - Como os pais podem apoiar uma criança com autismo?
+    - De que forma os pais podem ajudar no desenvolvimento de uma criança com autismo?
+    - O que os pais devem fazer para apoiar uma criança autista?
+    - Como posso ser um suporte melhor para meu filho autista?
+    - Quais estratégias ajudam os pais de autistas?
+    - Pais podem fazer alguma diferença no tratamento de autistas?
+    - Que tipo de orientação é útil para pais de crianças com autismo?
+    - O que os pais devem saber para apoiar o desenvolvimento de uma criança com autismo?
+
+- intent: intent_7
+  examples: |
+    - Qual é a diferença entre autismo e síndrome de Asperger?
+    - Em que o autismo difere da síndrome de Asperger?
+    - Asperger e autismo são a mesma coisa?
+    - Existem diferenças entre autismo e Asperger?
+    - Asperger faz parte do espectro do autismo?
+    - O que distingue Asperger do autismo?
+    - Asperger é considerado autismo?
+    - Autismo e Asperger têm os mesmos sintomas?
+
+- intent: intent_8
+  examples: |
+    - O autismo afeta apenas crianças?
+    - O autismo afeta somente a infância ou também a idade adulta?
+    - Autismo é uma condição exclusiva de crianças?
+    - Adultos também podem ter autismo?
+    - Autismo desaparece na idade adulta?
+    - Crianças autistas continuam a ser autistas quando adultas?
+    - Autismo é algo que afeta todas as idades?
+    - Uma pessoa autista na infância é autista na vida adulta?
+
+- intent: intent_9
+  examples: |
+    - Qual é a prevalência do autismo?
+    - Qual é a taxa de incidência de autismo na população?
+    - Quantas pessoas são diagnosticadas com autismo?
+    - O autismo é comum?
+    - Qual porcentagem da população tem autismo?
+    - Existem dados sobre quantas pessoas têm autismo?
+    - A prevalência do autismo está aumentando?
+    - Quantos casos de autismo existem hoje em dia?
+
+- intent: intent_10
+  examples: |
+    - Existem estratégias específicas para a educação de crianças com autismo?
+    - Quais métodos são usados na educação de crianças com autismo?
+    - O que professores devem saber sobre autismo?
+    - Existe um plano de ensino adequado para autistas?
+    - Como ajudar autistas a aprender na escola?
+    - Quais estratégias são mais eficazes para o ensino de autistas?
+    - Como melhorar a educação para crianças com autismo?
+
+- intent: intent_11
+  examples: |
+    - O autismo pode ser identificado em testes pré-natais?
+    - Há testes pré-natais que podem identificar o autismo?
+    - É possível detectar autismo antes do nascimento?
+    - Testes genéticos podem identificar autismo?
+    - Autismo pode ser detectado no útero?
+    - Existe algum exame para diagnosticar autismo antes do nascimento?
+    - Quais exames pré-natais identificam o autismo?
+    - Autismo é identificado através de exames durante a gravidez?
+
+
+- intent: intent_12
+  examples: |
+    - Como a terapia ocupacional pode ajudar pessoas com autismo?
+    - Como a terapia ocupacional pode contribuir para o desenvolvimento de pessoas com autismo?
+    - Terapia ocupacional é benéfica para autistas?
+    - Autistas podem se beneficiar da terapia ocupacional?
+    - Quais habilidades a terapia ocupacional desenvolve em autistas?
+    - A terapia ocupacional é indicada para autistas de todas as idades?
+    - Como a terapia ocupacional ajuda no comportamento autista?
+    - A terapia ocupacional é eficaz para autistas?
+
+- intent: intent_13
+  examples: |
+    - Qual é a diferença entre autismo e TDAH?
+    - Qual é a relação entre autismo e TDAH?
+    - Autismo e TDAH são condições diferentes?
+    - Existem semelhanças entre autismo e TDAH?
+    - Autismo e TDAH podem coexistir?
+    - Como saber se é autismo ou TDAH?
+    - Autistas também podem ter TDAH?
+    - TDAH e autismo apresentam sintomas semelhantes?
+
+- intent: intent_14
+  examples: |
+    - O que são habilidades sociais e como são afetadas pelo autismo?
+    - O que são habilidades sociais no contexto do autismo?
+    - Autismo afeta habilidades sociais?
+    - Autistas têm dificuldades em habilidades sociais?
+    - Como o autismo impacta as habilidades sociais?
+    - O que fazer para ajudar autistas com habilidades sociais?
+    - Quais habilidades sociais são desafiadoras para autistas?
+    - Autistas desenvolvem habilidades sociais?
+
+- intent: intent_15
+  examples: |
+    - O autismo pode ser tratado com medicamentos?
+    - Medicamentos são utilizados para tratar o autismo?
+    - Existem remédios para autismo?
+    - Medicamentos ajudam no tratamento do autismo?
+    - Quais medicamentos são comuns para autistas?
+    - O tratamento de autismo inclui medicação?
+    - Autistas precisam de medicação para o tratamento?
+    - Medicamentos podem aliviar sintomas de autismo?
+
+- intent: intent_16
+  examples: |
+    - Quais são as abordagens terapêuticas mais eficazes para autismo?
+    - Quais terapias mostram os melhores resultados no tratamento do autismo?
+    - Existem abordagens terapêuticas recomendadas para autistas?
+    - Qual terapia é mais recomendada para autismo?
+    - Quais tratamentos têm sucesso para autismo?
+    - Existem terapias específicas que ajudam autistas?
+    - Qual abordagem terapêutica é melhor para autistas?
+    - Como saber qual terapia é mais eficaz para autismo?
+
+- intent: intent_17
+  examples: |
+    - Como a dieta pode afetar pessoas com autismo?
+    - Como a alimentação influencia as pessoas com autismo?
+    - Dieta específica ajuda no tratamento de autismo?
+    - Alimentos podem melhorar o comportamento de autistas?
+    - Há alimentos que beneficiam autistas?
+    - A dieta impacta o comportamento de autistas?
+    - Quais alimentos são recomendados para autistas?
+    - Existe uma dieta especial para pessoas com autismo?
+
+- intent: intent_18
+  examples: |
+    - Qual é o papel da terapia comportamental no tratamento do autismo?
+    - A terapia comportamental tem um papel importante no tratamento do autismo?
+    - Como a terapia comportamental ajuda no tratamento do autismo?
+    - Terapia comportamental é recomendada para autistas?
+    - Autistas se beneficiam de terapia comportamental?
+    - Qual a importância da terapia comportamental para autistas?
+    - A terapia comportamental é eficaz para autismo?
+    - Quais são os benefícios da terapia comportamental para autistas?
+
+- intent: intent_19
+  examples: |
+    - O autismo é mais comum em meninos ou meninas?
+    - Existe uma predominância do autismo em meninos comparado a meninas?
+    - Autismo afeta mais meninos ou meninas?
+    - Meninos têm mais chances de ser autistas?
+    - O autismo é igualmente comum em meninos e meninas?
+    - Autismo tem maior prevalência em meninas?
+    - A maioria dos casos de autismo é em meninos?
+    - Qual gênero é mais afetado pelo autismo?
+
+- intent: intent_20
+  examples: |
+    - Como a tecnologia pode ajudar pessoas com autismo?
+    - De que forma a tecnologia pode ser usada para ajudar pessoas com autismo?
+    - Ferramentas tecnológicas auxiliam autistas?
+    - Que tipos de tecnologia ajudam autistas?
+    - A tecnologia facilita o aprendizado de autistas?
+    - Como dispositivos digitais beneficiam pessoas com autismo?
+    - Aplicativos podem ajudar no desenvolvimento de autistas?
+    - Tecnologia é útil para comunicação em autistas?
+
+- intent: intent_21
+  examples: |
+    - O autismo pode ser curado?
+    - O autismo é uma condição que pode ser curada?
+    - Existe cura para o autismo?
+    - Autismo tem cura?
+    - Autistas podem ser curados?
+    - O autismo desaparece com o tempo?
+    - Autismo é uma condição permanente?
+    - Autistas permanecem com essa condição para sempre?
+
+
+- intent: intent_22
+  examples: |
+    - Qual é o impacto do autismo na vida familiar?
+    - Como o autismo impacta a dinâmica familiar?
+    - Autismo afeta o ambiente familiar?
+    - Como as famílias lidam com o autismo?
+    - Autismo causa desafios na vida familiar?
+    - Quais são os principais desafios do autismo para a família?
+    - Como o autismo pode mudar a rotina familiar?
+    - A convivência familiar é afetada pelo autismo?
+
+- intent: intent_23
+  examples: |
+    - Como a escola pode apoiar uma criança com autismo?
+    - Que tipo de apoio a escola pode oferecer para crianças com autismo?
+    - Como as escolas podem ajudar crianças autistas?
+    - Que suporte educacional é recomendado para autistas?
+    - Escolas têm recursos para alunos com autismo?
+    - Como adaptar o ambiente escolar para autistas?
+    - Existe apoio educacional específico para autistas?
+    - Como a escola pode facilitar o aprendizado de autistas?
+
+- intent: intent_24
+  examples: |
+    - O autismo pode ser associado a outras condições de saúde?
+    - O autismo está associado a outras condições de saúde mental?
+    - Quais condições de saúde podem coexistir com o autismo?
+    - Autistas têm mais chances de desenvolver outras condições?
+    - O autismo é frequentemente associado a outras condições médicas?
+    - Quais condições são comuns em pessoas com autismo?
+    - Autistas podem ter mais de uma condição?
+    - Autismo pode coexistir com outras condições mentais?
+
+- intent: intent_25
+  examples: |
+    - O que são estratégias de comunicação alternativa?
+    - Quais são as estratégias alternativas de comunicação para autistas?
+    - Como a comunicação alternativa ajuda autistas?
+    - Quais dispositivos de comunicação alternativa são úteis para autistas?
+    - Existe tecnologia para ajudar na comunicação de autistas?
+    - O que é comunicação alternativa no contexto do autismo?
+    - Autistas usam comunicação alternativa?
+    - Como a comunicação alternativa pode melhorar a interação de autistas?
+
+- intent: intent_26
+  examples: |
+    - Como os profissionais de saúde podem ajudar na gestão do autismo?
+    - Como os profissionais de saúde ajudam na gestão do autismo?
+    - Qual o papel dos médicos no tratamento do autismo?
+    - Que tipo de suporte os profissionais de saúde oferecem a autistas?
+    - Como médicos e terapeutas auxiliam autistas?
+    - Profissionais de saúde são essenciais no tratamento do autismo?
+    - Quem são os profissionais que tratam o autismo?
+    - Qual é o papel da equipe médica na gestão do autismo?
+
+- intent: intent_27
+  examples: |
+    - Qual é o papel da intervenção precoce no autismo?
+    - Qual a importância de identificar o autismo precocemente?
+    - Intervenção precoce ajuda no autismo?
+    - Por que a intervenção precoce é importante no autismo?
+    - Autismo deve ser tratado o quanto antes?
+    - Quais são os benefícios da intervenção precoce no autismo?
+    - Intervenção precoce melhora o prognóstico do autismo?
+    - Quanto antes detectar o autismo, melhor?
+
+- intent: intent_28
+  examples: |
+    - Quais são os efeitos do autismo na vida adulta?
+    - Autismo continua a afetar a pessoa na vida adulta?
+    - O autismo apresenta novos desafios na vida adulta?
+    - Quais adaptações autistas precisam na vida adulta?
+    - Autistas enfrentam dificuldades na fase adulta?
+    - Como o autismo impacta a independência na vida adulta?
+    - O que muda para autistas ao envelhecer?
+
+- intent: intent_29
+  examples: |
+    - O autismo é uma condição hereditária?
+    - O autismo tem origem hereditária?
+    - Autismo pode ser transmitido geneticamente?
+    - Existe fator hereditário para o autismo?
+    - A genética é um fator no autismo?
+    - O autismo é genético?
+    - Autismo pode ser passado de pais para filhos?
+    - Qual é o papel da hereditariedade no autismo?
+
+
+- intent: intent_30
+  examples: |
+    - Como os terapeutas ocupacionais trabalham com pessoas com autismo?
+    - Como os terapeutas ocupacionais auxiliam pessoas com autismo no cotidiano?
+    - Qual é o papel da terapia ocupacional no autismo?
+    - Autistas podem melhorar com terapia ocupacional?
+    - Que técnicas de terapia ocupacional ajudam autistas?
+    - Como a terapia ocupacional contribui para a independência de autistas?
+    - Quais habilidades são desenvolvidas pela terapia ocupacional em autistas?
+    - Terapia ocupacional é indicada para todas as idades no autismo?
+
+- intent: intent_31
+  examples: |
+    - Quais são as abordagens educacionais para crianças com autismo?
+    - Quais métodos educacionais são eficazes para crianças com autismo?
+    - Como adaptar o ensino para crianças autistas?
+    - Quais estratégias educacionais ajudam no aprendizado de autistas?
+    - Existem programas educacionais específicos para autistas?
+    - Qual o impacto das abordagens educativas em autistas?
+    - Como as escolas adaptam o currículo para alunos com autismo?
+    - Métodos de ensino podem ser personalizados para autistas?
+
+- intent: intent_32
+  examples: |
+    - Qual é a importância da inclusão social para pessoas com autismo?
+    - Por que a inclusão social é importante para pessoas com autismo?
+    - Autistas se beneficiam da inclusão social?
+    - Como a inclusão social impacta o desenvolvimento de autistas?
+    - Por que a sociedade deve incluir pessoas com autismo?
+    - Inclusão social melhora a qualidade de vida de autistas?
+    - Autistas têm direito à inclusão social?
+    - Como promover a inclusão social de pessoas com autismo?
+
+- intent: intent_33
+  examples: |
+    - Como o autismo afeta a comunicação?
+    - De que forma o autismo pode impactar a comunicação?
+    - Autismo causa dificuldades na comunicação?
+    - Quais são os desafios de comunicação para autistas?
+    - Como autistas se comunicam de forma diferente?
+    - Autismo afeta habilidades de comunicação verbal?
+    - Como o autismo interfere na expressão e comunicação?
+    - Que dificuldades de comunicação são comuns em autistas?
+
+- intent: intent_34
+  examples: |
+    - O que é um plano educacional individualizado (PEI)?
+    - O que é um plano educacional individualizado para autistas?
+    - PEI é necessário para alunos com autismo?
+    - Quais são os benefícios do PEI para autistas?
+    - Como o PEI ajuda no aprendizado de autistas?
+    - Plano educacional individualizado é comum para autistas?
+    - Quem deve criar um PEI para uma criança autista?
+    - O que é incluído em um PEI para autistas?
+
+- intent: intent_35
+  examples: |
+    - Qual é o papel das habilidades de vida diária para pessoas com autismo?
+    - Qual a relevância das habilidades de vida diária para pessoas com autismo?
+    - Autistas precisam desenvolver habilidades de vida diária?
+    - Quais são as habilidades de vida diária essenciais para autistas?
+    - Como as habilidades de vida diária contribuem para a independência de autistas?
+    - Ensinar habilidades de vida diária é importante para autistas?
+    - Que atividades ajudam autistas nas habilidades de vida diária?
+    - Autistas podem aprender habilidades de vida diária com suporte?
+
+- intent: intent_36
+  examples: |
+    - Como a terapia de integração sensorial ajuda pessoas com autismo?
+    - Como a terapia de integração sensorial auxilia autistas com hipersensibilidades?
+    - A terapia de integração sensorial beneficia autistas?
+    - Sensibilidade sensorial de autistas pode ser tratada?
+    - Como melhorar a resposta sensorial em autistas?
+    - Quais técnicas de integração sensorial ajudam autistas?
+    - A terapia sensorial é indicada para autistas com hiper ou hipossensibilidade?
+    - Terapia de integração sensorial ajuda no controle comportamental de autistas?
+
+- intent: intent_37
+  examples: |
+    - O que é a Análise Comportamental Aplicada (ABA)?
+    - A análise comportamental aplicada (ABA) é eficaz para autismo?
+    - ABA é recomendada para tratamento de autistas?
+    - Como a ABA ajuda autistas?
+    - Quais técnicas de ABA são usadas com autistas?
+    - ABA é uma abordagem terapêutica para autismo?
+    - Análise comportamental aplicada tem sucesso no tratamento de autistas?
+    - ABA é um método seguro e eficaz para autismo?
+
+- intent: intent_38
+  examples: |
+    - Qual é o impacto do autismo no desenvolvimento social?
+    - O autismo influencia no desenvolvimento social das crianças?
+    - Crianças autistas enfrentam desafios no desenvolvimento social?
+    - Como o autismo afeta a socialização?
+    - Autismo dificulta o desenvolvimento de habilidades sociais?
+    - Como o autismo interfere nas relações sociais?
+    - Qual é o efeito do autismo na criação de vínculos sociais?
+    - Autismo limita a interação social desde a infância?
+
+- intent: intent_39
+  examples: |
+    - Como os pais podem encontrar recursos para autismo?
+    - Onde os pais podem encontrar recursos e apoio para o autismo?
+    - Que recursos estão disponíveis para famílias de autistas?
+    - Como acessar suporte para pais de crianças autistas?
+    - Quais instituições oferecem recursos para autistas?
+    - Existe ajuda financeira para famílias de autistas?
+    - Pais de autistas têm acesso a serviços de suporte?
+    - Que programas de apoio existem para o autismo?
+
+- intent: intent_40
+  examples: |
+    - O que são estratégias de ensino baseadas em reforço positivo?
+    - Como o reforço positivo é aplicado no ensino de autistas?
+    - Reforço positivo é eficaz para autistas?
+    - Como ensinar com reforço positivo no contexto do autismo?
+    - Quais são os benefícios do reforço positivo para autistas?
+    - Como o reforço positivo ajuda no desenvolvimento de autistas?
+    - Exemplos de reforço positivo para autistas no aprendizado?
+    - Como o reforço positivo é usado na terapia comportamental para autismo?
+
+
+- intent: intent_41
+  examples: |
+    - O autismo pode ser diagnosticado em adultos?
+    - Adultos também podem receber um diagnóstico de autismo?
+    - Como o autismo é diagnosticado em adultos?
+    - Quais são os sinais de autismo em adultos?
+    - É possível diagnosticar autismo em uma pessoa mais velha?
+    - Diagnósticos de autismo podem ser feitos em qualquer idade?
+    - Autismo pode ser diagnosticado na fase adulta?
+    - Como identificar autismo em adultos?
+
+- intent: intent_42
+  examples: |
+    - Como as terapias de linguagem podem ajudar pessoas com autismo?
+    - Em que a terapia de linguagem pode beneficiar autistas?
+    - Quais são os efeitos da terapia de linguagem para autistas?
+    - Como a terapia de fala ajuda pessoas com autismo?
+    - Terapias de linguagem melhoram a comunicação de autistas?
+    - Autistas podem ter benefícios com terapias de linguagem?
+    - O que a terapia de linguagem oferece para autistas?
+    - Terapia de linguagem é indicada para crianças autistas?
+
+- intent: intent_43
+  examples: |
+    - Qual é o impacto do autismo na vida profissional?
+    - Como o autismo pode impactar a vida profissional?
+    - Autistas enfrentam desafios no ambiente de trabalho?
+    - Autismo afeta as escolhas de carreira?
+    - Quais são os desafios profissionais para autistas?
+    - Como autistas podem se adaptar ao trabalho?
+    - Autistas podem ter uma carreira bem-sucedida?
+    - Empresas têm programas de inclusão para autistas?
+
+- intent: intent_44
+  examples: |
+    - Como o autismo pode afetar a capacidade de aprendizagem?
+    - O autismo pode afetar a capacidade de aprendizagem?
+    - Autistas têm dificuldades no aprendizado?
+    - Como o autismo interfere na habilidade de aprender?
+    - Crianças autistas precisam de adaptações no ensino?
+    - Autismo pode causar problemas de aprendizado?
+    - Quais são as limitações de aprendizado em autistas?
+    - Como adaptar o ensino para as necessidades de autistas?
+
+- intent: intent_45
+  examples: |
+    - O que são habilidades de auto-regulação e como são afetadas pelo autismo?
+    - Como o autismo interfere nas habilidades de auto-regulação?
+    - Autistas têm dificuldades em auto-regulação?
+    - O autismo impacta a habilidade de auto-regulação emocional?
+    - Quais habilidades de auto-regulação são afetadas pelo autismo?
+    - Autismo interfere no controle emocional?
+    - Como autistas podem desenvolver auto-regulação?
+    - Quais estratégias ajudam na auto-regulação de autistas?
+
+- intent: intent_46
+  examples: |
+    - Qual é a importância do apoio familiar no tratamento do autismo?
+    - Como o apoio familiar influencia o tratamento de autismo?
+    - Família tem um papel importante no tratamento de autistas?
+    - O suporte familiar é essencial para autistas?
+    - Como a família pode contribuir no tratamento do autismo?
+    - O que a família pode fazer para ajudar um autista?
+    - Como o apoio da família impacta o bem-estar de autistas?
+    - Quais são os benefícios do suporte familiar para autistas?
+
+- intent: intent_47
+  examples: |
+    - Como a terapia de comportamento pode ajudar a melhorar habilidades sociais?
+    - Quais habilidades sociais podem ser desenvolvidas na terapia de comportamento?
+    - Terapia de comportamento é eficaz para habilidades sociais?
+    - Autistas desenvolvem habilidades sociais na terapia comportamental?
+    - Terapia de comportamento auxilia na interação social de autistas?
+    - Quais são os benefícios sociais da terapia comportamental para autistas?
+    - Como a terapia comportamental melhora habilidades de interação?
+    - Terapia comportamental é indicada para habilidades sociais de autistas?
+
+- intent: intent_48
+  examples: |
+    - O autismo pode ser associado a outras condições neuropsiquiátricas?
+    - O autismo pode coexistir com outras condições neuropsiquiátricas?
+    - Autistas têm mais probabilidade de ter outras condições mentais?
+    - Autismo está relacionado a outras condições neuropsiquiátricas?
+    - Quais são as condições neuropsiquiátricas associadas ao autismo?
+    - Autistas enfrentam outras condições além do autismo?
+    - Como o autismo se relaciona com outras condições mentais?
+    - Autismo pode vir acompanhado de outras condições neuropsiquiátricas?
+
+- intent: intent_49
+  examples: |
+    - Como os profissionais podem ajudar a promover a inclusão de pessoas com autismo?
+    - Como os profissionais podem promover a inclusão de autistas?
+    - Profissionais podem ajudar na inclusão social de autistas?
+    - Quais são os papéis dos profissionais na inclusão de autistas?
+    - Como o trabalho de profissionais apoia a inclusão de autistas?
+    - Inclusão social de autistas depende de suporte profissional?
+    - Profissionais ajudam na adaptação social de autistas?
+    - Quais ações profissionais promovem inclusão para autistas?
+
+- intent: intent_50
+  examples: |
+    - O que é a terapia de habilidades sociais?
+    - O que a terapia de habilidades sociais pode oferecer para autistas?
+    - Terapia de habilidades sociais é recomendada para autistas?
+    - Autistas podem desenvolver habilidades sociais na terapia?
+    - Como a terapia de habilidades sociais beneficia autistas?
+    - Quais são os resultados da terapia de habilidades sociais para autistas?
+    - Terapia de habilidades sociais é importante para autistas?
+    - Autistas têm ganhos com terapia de habilidades sociais?
+
+
+- intent: intent_51
+  examples: |
+    - Quais são os desafios comuns enfrentados por adultos com autismo?
+    - Quais são os principais desafios enfrentados por adultos autistas?
+    - Adultos autistas têm dificuldades específicas?
+    - Como o autismo afeta a vida adulta?
+    - Quais dificuldades sociais adultos autistas enfrentam?
+    - Autistas adultos têm mais desafios profissionais?
+    - Como o autismo impacta a vida cotidiana dos adultos?
+    - Quais desafios emocionais são comuns em adultos autistas?
+
+- intent: intent_52
+  examples: |
+    - Como a educação inclusiva pode beneficiar alunos com autismo?
+    - Como a educação inclusiva pode apoiar o desenvolvimento de autistas?
+    - Educação inclusiva traz benefícios para autistas?
+    - Alunos autistas se beneficiam da educação inclusiva?
+    - Quais são os resultados da educação inclusiva para autistas?
+    - Como a inclusão educacional ajuda estudantes autistas?
+    - Educação inclusiva melhora a aprendizagem de autistas?
+    - Como adaptar a educação para incluir alunos autistas?
+
+- intent: intent_53
+  examples: |
+    - Qual é o impacto do autismo na comunicação não verbal?
+    - Como o autismo pode impactar a comunicação não verbal?
+    - Autistas têm dificuldades com a comunicação não verbal?
+    - Autismo afeta a interpretação de linguagem corporal?
+    - Como o autismo interfere na expressão não verbal?
+    - O que autistas precisam para melhorar a comunicação não verbal?
+    - Autismo causa problemas de comunicação não verbal?
+    - Quais aspectos não verbais são desafiadores para autistas?
+
+- intent: intent_54
+  examples: |
+    - Como a terapia de integração sensorial pode ajudar a lidar com desafios sensoriais?
+    - Quais benefícios a terapia de integração sensorial oferece?
+    - Autistas com sensibilidade sensorial se beneficiam da terapia?
+    - Terapia de integração sensorial é eficaz para autistas?
+    - Autismo e sensibilidade sensorial podem ser tratados juntos?
+    - Como reduzir a hipersensibilidade em autistas com terapia?
+    - Que técnicas de integração sensorial ajudam autistas?
+    - A terapia sensorial ajuda autistas com sobrecarga sensorial?
+
+- intent: intent_55
+  examples: |
+    - Quais são os benefícios de programas de apoio para famílias de crianças com autismo?
+    - Quais programas de apoio estão disponíveis para famílias de autistas?
+    - Como programas de apoio ajudam famílias com autistas?
+    - Famílias de autistas têm suporte institucional?
+    - Como programas de apoio beneficiam pais de autistas?
+    - Existe suporte psicológico para famílias de autistas?
+    - Programas de apoio ajudam na adaptação familiar ao autismo?
+    - Quais programas beneficiam o convívio familiar com autistas?
+
+- intent: intent_56
+  examples: |
+    - O autismo pode afetar o desenvolvimento motor?
+    - O autismo pode influenciar o desenvolvimento motor?
+    - Crianças autistas têm atraso no desenvolvimento motor?
+    - Como o autismo interfere nas habilidades motoras?
+    - Autismo afeta a coordenação motora?
+    - Quais dificuldades motoras são comuns em autistas?
+    - Desenvolvimento motor é comprometido no autismo?
+    - Como melhorar a motricidade em crianças autistas?
+
+- intent: intent_57
+  examples: |
+    - Como as terapias baseadas em jogos podem beneficiar crianças com autismo?
+    - Como as terapias baseadas em jogos ajudam crianças com autismo?
+    - Terapias baseadas em jogos são indicadas para autistas?
+    - Jogos terapêuticos beneficiam o desenvolvimento de autistas?
+    - Quais jogos terapêuticos são recomendados para autistas?
+    - Autistas podem se beneficiar de terapias lúdicas?
+    - Terapias com jogos melhoram habilidades sociais de autistas?
+    - Como jogos ajudam na interação social de crianças autistas?
+
+- intent: intent_58
+  examples: |
+    - Qual é o papel do suporte escolar para alunos com autismo?
+    - Qual é o papel do suporte escolar no desenvolvimento de crianças com autismo?
+    - Escolas devem adaptar o ensino para autistas?
+    - Alunos autistas precisam de suporte extra na escola?
+    - Como as escolas apoiam crianças autistas?
+    - Qual é a importância do suporte educacional para autistas?
+    - Autistas podem ter acompanhamento especial na escola?
+    - Escolas têm recursos para ajudar alunos autistas?
+
+- intent: intent_59
+  examples: |
+    - Como a terapia de suporte familiar pode ajudar no tratamento do autismo?
+    - De que forma a terapia de suporte familiar ajuda no tratamento do autismo?
+    - Terapia de suporte familiar é indicada para famílias de autistas?
+    - Como o suporte familiar influencia o desenvolvimento de autistas?
+    - Terapia de suporte familiar beneficia autistas e suas famílias?
+    - O suporte familiar melhora o tratamento de crianças autistas?
+    - Como envolver a família no tratamento de autistas?
+    - Terapia de suporte familiar é fundamental para autistas?
+
+- intent: intent_60
+  examples: |
+    - Quais são os desafios enfrentados por pessoas com autismo em ambientes sociais?
+    - Quais desafios sociais são comuns para pessoas com autismo?
+    - Autistas enfrentam barreiras em ambientes sociais?
+    - Como o autismo afeta a interação em sociedade?
+    - Quais dificuldades sociais autistas encontram?
+    - Autistas têm desafios específicos em ambientes sociais?
+    - Como autistas podem superar desafios sociais?
+    - Quais estratégias ajudam autistas em interações sociais?
+
+- intent: intent_61
+  examples: |
+    - Como a terapia fonoaudiológica pode ajudar pessoas com autismo?
+    - Como a fonoaudiologia pode beneficiar pessoas com autismo?
+    - Terapia fonoaudiológica melhora a comunicação de autistas?
+    - Autistas podem se beneficiar da terapia fonoaudiológica?
+    - Quais são os resultados da fonoaudiologia para autistas?
+    - Terapia de fala é indicada para autistas?
+    - Como a terapia fonoaudiológica impacta a vida de autistas?
+    - Autistas desenvolvem comunicação com ajuda da fonoaudiologia?
+
+- intent: intent_62
+  examples: |
+    - O que são terapias de grupo para autismo?
+    - Qual é a função das terapias de grupo para autistas?
+    - Autistas podem participar de terapias de grupo?
+    - Quais são os benefícios das terapias de grupo para autistas?
+    - Terapias de grupo são eficazes para autistas?
+    - Como as terapias de grupo ajudam autistas?
+    - Terapia de grupo é recomendada para autistas de todas as idades?
+    - Autistas se beneficiam de interações em terapias de grupo?
+
+
+- intent: intent_63
+  examples: |
+    - Como a análise funcional do comportamento é usada no tratamento do autismo?
+    - Como a análise funcional do comportamento auxilia no autismo?
+    - A análise funcional é eficaz no tratamento do autismo?
+    - Como a análise comportamental ajuda a entender o comportamento autista?
+    - Qual é o papel da análise funcional para autistas?
+    - Análise funcional é indicada para tratamento de autismo?
+    - Como a análise funcional melhora o controle de comportamentos em autistas?
+    - Autistas se beneficiam da análise funcional do comportamento?
+
+- intent: intent_64
+  examples: |
+    - O autismo pode afetar a capacidade de lidar com mudanças?
+    - O autismo pode dificultar a adaptação a mudanças?
+    - Autistas têm dificuldades com mudanças?
+    - Como o autismo afeta a habilidade de aceitar mudanças?
+    - Autistas se adaptam facilmente a mudanças de rotina?
+    - Quais estratégias ajudam autistas a lidar com mudanças?
+    - Autistas enfrentam desafios em situações novas?
+    - Como autistas podem aprender a lidar com mudanças?
+
+- intent: intent_65
+  examples: |
+    - Como o treinamento em habilidades de vida pode ajudar pessoas com autismo?
+    - Como o treinamento de habilidades de vida ajuda autistas na independência?
+    - Treinamento em habilidades de vida é útil para autistas?
+    - Quais habilidades de vida são ensinadas a autistas?
+    - Habilidades de vida contribuem para a autonomia de autistas?
+    - Autistas podem se beneficiar do treino de habilidades de vida?
+    - Como habilidades de vida auxiliam autistas na rotina?
+    - Autistas conseguem melhorar com treinamento em habilidades de vida?
+
+- intent: intent_66
+  examples: |
+    - O que são abordagens de ensino baseadas em competências?
+    - O que são métodos de ensino com base em competências?
+    - Como abordagens baseadas em competências beneficiam autistas?
+    - Competências são eficazes no ensino de autistas?
+    - Qual é a importância de competências no ensino de autistas?
+    - Como o ensino por competências ajuda autistas a aprender?
+    - Autistas respondem bem ao ensino baseado em competências?
+    - O que distingue o ensino por competências para autistas?
+
+- intent: intent_67
+  examples: |
+    - Como as terapias baseadas em movimento podem beneficiar pessoas com autismo?
+    - Como as terapias baseadas em movimento beneficiam pessoas com autismo?
+    - Movimento é importante na terapia de autistas?
+    - Terapias de movimento ajudam autistas no desenvolvimento motor?
+    - Autistas podem melhorar com terapias de movimento?
+    - Quais terapias de movimento são eficazes para autistas?
+    - Terapias com atividades físicas ajudam autistas?
+    - Autistas se beneficiam de exercícios em terapias de movimento?
+
+- intent: intent_68
+  examples: |
+    - Qual é o impacto do autismo na percepção sensorial?
+    - Como o autismo afeta a percepção sensorial das crianças?
+    - Autistas têm dificuldades com estímulos sensoriais?
+    - Sensibilidade sensorial é comum em pessoas com autismo?
+    - Como o autismo altera a percepção de estímulos sensoriais?
+    - Autistas reagem de forma diferente a sons e luzes?
+    - A percepção sensorial é alterada no autismo?
+    - Autismo afeta a forma como os sentidos percebem o ambiente?
+
+- intent: intent_69
+  examples: |
+    - Como os pais podem se preparar para um diagnóstico de autismo?
+    - Como os pais podem se preparar para receber um diagnóstico de autismo?
+    - O que os pais devem saber ao receber um diagnóstico de autismo?
+    - Como pais lidam com o diagnóstico de autismo?
+    - Quais passos os pais devem tomar após o diagnóstico de autismo?
+    - Como apoiar os pais de crianças autistas após o diagnóstico?
+    - O que os pais precisam para apoiar um filho autista?
+    - Como pais podem entender melhor o diagnóstico de autismo?
+
+- intent: intent_70
+  examples: |
+    - O autismo é uma condição progressiva?
+    - O autismo é uma condição progressiva ou estacionária?
+    - Autismo é uma condição que se agrava com o tempo?
+    - Autistas podem ter piora dos sintomas com o tempo?
+    - O autismo apresenta mudanças ao longo da vida?
+    - Autismo é uma condição estável ou pode progredir?
+    - O autismo afeta mais com a idade?
+    - Há mudanças nos sintomas de autismo ao longo do tempo?
+
+- intent: intent_71
+  examples: |
+    - Como a terapia cognitivo-comportamental pode ajudar pessoas com autismo?
+    - A terapia cognitivo-comportamental é recomendada para autistas?
+    - Terapia cognitivo-comportamental é eficaz para autismo?
+    - Como a TCC beneficia autistas?
+    - Autistas se beneficiam da terapia cognitivo-comportamental?
+    - Quais são os efeitos da TCC para autistas?
+    - A TCC é útil para lidar com comportamentos autistas?
+    - Terapia cognitivo-comportamental ajuda na gestão emocional de autistas?
+
+- intent: intent_72
+  examples: |
+    - Qual é o papel das habilidades de resolução de problemas para pessoas com autismo?
+    - Qual a importância das habilidades de resolução de problemas no autismo?
+    - Autistas podem desenvolver resolução de problemas?
+    - Resolução de problemas é importante no tratamento de autismo?
+    - Como a habilidade de resolver problemas ajuda autistas?
+    - Autistas podem melhorar na resolução de problemas?
+    - Quais são os desafios na resolução de problemas para autistas?
+    - Habilidades de resolução de problemas são ensinadas a autistas?
+
+- intent: intent_73
+  examples: |
+    - Como os grupos de apoio podem beneficiar famílias de crianças com autismo?
+    - Como os grupos de apoio auxiliam famílias de autistas?
+    - Grupos de apoio são úteis para pais de autistas?
+    - Pais de autistas se beneficiam de grupos de apoio?
+    - Quais são os resultados de grupos de apoio para famílias de autistas?
+    - Como grupos de apoio fortalecem famílias de autistas?
+    - Autismo é melhor compreendido com ajuda de grupos de apoio?
+    - Grupos de apoio oferecem suporte emocional para pais de autistas?
+
+
+- intent: intent_74
+  examples: |
+    - Qual é o impacto do autismo na habilidade de leitura e escrita?
+    - O autismo pode afetar a habilidade de leitura e escrita?
+    - Como o autismo interfere na alfabetização?
+    - Autistas têm dificuldades com leitura e escrita?
+    - Quais são os desafios para autistas na leitura?
+    - A escrita é afetada em pessoas com autismo?
+    - Como o autismo influencia no aprendizado de leitura?
+    - Leitura e escrita podem ser difíceis para autistas?
+
+- intent: intent_75
+  examples: |
+    - Como o autismo afeta a interação com colegas?
+    - Como o autismo afeta a interação social com colegas?
+    - Autistas conseguem interagir bem com colegas?
+    - Qual é a dificuldade de autistas na interação com colegas?
+    - Interação social é um desafio para autistas?
+    - Autismo pode dificultar relações com colegas?
+    - Como autistas lidam com interação social na escola?
+    - Colegas podem ajudar na inclusão social de autistas?
+
+- intent: intent_76
+  examples: |
+    - O que é um plano de intervenção individualizado?
+    - O que é um plano de intervenção individualizado para autistas?
+    - Como funciona um plano individual para autistas?
+    - Autistas se beneficiam de um plano de intervenção?
+    - Qual é o objetivo do plano de intervenção para autismo?
+    - Como um plano individualizado ajuda no tratamento de autismo?
+    - Quem desenvolve o plano de intervenção individualizado para autistas?
+    - Planos de intervenção são recomendados para autistas?
+
+- intent: intent_77
+  examples: |
+    - Como a terapia de comunicação pode ajudar a melhorar a expressão verbal?
+    - A terapia de comunicação pode ajudar na expressão verbal?
+    - Expressão verbal melhora com terapia de comunicação?
+    - Quais são os benefícios da terapia de comunicação para autistas?
+    - Terapia de comunicação ajuda autistas a se expressarem melhor?
+    - Como a expressão verbal de autistas é trabalhada em terapia?
+    - Autistas conseguem melhorar a fala com terapia de comunicação?
+    - Quais são as técnicas usadas para melhorar a fala em autistas?
+    
+# Continuação com intents de número 78 em diante...
+
+- intent: intent_78
+  examples: |
+    - Qual é o impacto do autismo na vida social de um adolescente?
+    - Como o autismo afeta a vida social de adolescentes?
+    - Quais são os desafios sociais para adolescentes autistas?
+    - A vida social de adolescentes é impactada pelo autismo?
+    - Em que aspectos o autismo afeta a vida social de adolescentes?
+    - A socialização de adolescentes é diferente no autismo?
+    - Como o autismo interfere nas relações de amizade na adolescência?
+    - Quais são os desafios para adolescentes autistas em termos de socialização?
+
+- intent: intent_79
+  examples: |
+    - Como as técnicas de ensino visual podem ajudar pessoas com autismo?
+    - As técnicas de ensino visual são úteis para autistas?
+    - Quais técnicas visuais ajudam pessoas com autismo a aprender?
+    - Como adaptar o ensino visual para autistas?
+    - O ensino visual é eficaz para pessoas com autismo?
+    - Por que o ensino visual é importante para autistas?
+    - Quais métodos visuais facilitam o aprendizado para autistas?
+    - Como as imagens ajudam no aprendizado de pessoas com autismo?
+
+- intent: intent_80
+  examples: |
+    - O que são programas de apoio à transição para adultos com autismo?
+    - Quais programas apoiam a transição para a vida adulta de autistas?
+    - Existe apoio para a transição de autistas para a vida adulta?
+    - Como os programas de apoio ajudam adultos autistas?
+    - A transição para a vida adulta é facilitada por programas de apoio?
+    - Programas de apoio são comuns para autistas em transição para a vida adulta?
+    - Que recursos existem para adultos autistas em transição?
+    - Existem programas específicos para autistas que chegam à fase adulta?
+
+- intent: intent_81
+  examples: |
+    - Qual é a importância do envolvimento dos pais no tratamento do autismo?
+    - Por que o envolvimento dos pais é essencial no tratamento do autismo?
+    - O papel dos pais é importante no tratamento de autistas?
+    - Como os pais influenciam no tratamento do autismo?
+    - O apoio familiar é significativo no tratamento de autistas?
+    - Em que o envolvimento dos pais é fundamental para autistas?
+    - O tratamento de autismo é mais eficaz com apoio parental?
+    - Por que os pais devem estar envolvidos no tratamento do autismo?
+
+- intent: intent_82
+  examples: |
+    - Como o autismo afeta a capacidade de processamento auditivo?
+    - O autismo afeta o processamento de informações auditivas?
+    - Pessoas com autismo têm dificuldade em processar sons?
+    - O autismo interfere no processamento auditivo?
+    - Processamento auditivo é impactado no autismo?
+    - A capacidade auditiva é alterada pelo autismo?
+    - Autistas processam informações sonoras de forma diferente?
+    - Como o processamento auditivo é afetado em autistas?
+
+- intent: intent_83
+  examples: |
+    - Qual é o papel da terapia de habilidades de vida no tratamento do autismo?
+    - Como a terapia de habilidades de vida apoia o desenvolvimento de autistas?
+    - A terapia de habilidades de vida é essencial para autistas?
+    - Como a independência é promovida pela terapia de habilidades de vida?
+    - Qual é o benefício da terapia de habilidades de vida para autistas?
+    - Pessoas com autismo podem se beneficiar da terapia de habilidades de vida?
+    - A terapia de habilidades de vida facilita o cotidiano de autistas?
+    - Em que aspectos a terapia de habilidades de vida ajuda autistas?
+
+- intent: intent_84
+  examples: |
+    - Como a terapia baseada em evidências pode beneficiar pessoas com autismo?
+    - Quais são os benefícios das terapias baseadas em evidências para autistas?
+    - A terapia baseada em evidências é eficaz para autistas?
+    - Autistas podem se beneficiar de tratamentos baseados em evidências?
+    - Por que é importante usar evidências nas terapias para autistas?
+    - O que terapias baseadas em evidências oferecem para autistas?
+    - As terapias baseadas em evidências são mais eficazes para autistas?
+    - Qual a importância de uma terapia baseada em evidências para autistas?
+
+- intent: intent_85
+  examples: |
+    - O que é a terapia de suporte social?
+    - A terapia de suporte social é útil para autistas?
+    - Qual a função da terapia de suporte social para autistas?
+    - Como a terapia de suporte social ajuda pessoas com autismo?
+    - Quais os benefícios da terapia de suporte social para autistas?
+    - A terapia de suporte social é indicada para autistas?
+    - Pessoas com autismo se beneficiam da terapia de suporte social?
+    - Em que casos a terapia de suporte social é indicada para autistas?
+
+
+- intent: intent_86
+  examples: |
+    - Como o autismo pode afetar a capacidade de compreender expressões faciais?
+    - A compreensão de expressões faciais é dificultada pelo autismo?
+    - Autistas têm dificuldades para entender expressões faciais?
+    - A leitura de emoções faciais é afetada no autismo?
+    - Pessoas com autismo reconhecem expressões faciais com dificuldade?
+    - Como o autismo afeta o entendimento de emoções no rosto?
+    - Quais dificuldades autistas enfrentam com expressões faciais?
+    - Como autistas lidam com expressões faciais?
+
+- intent: intent_87
+  examples: |
+    - Quais são os benefícios do treinamento em habilidades sociais para pessoas com autismo?
+    - O treinamento em habilidades sociais é útil para pessoas com autismo?
+    - Como o treinamento em habilidades sociais ajuda autistas?
+    - Autistas podem melhorar suas habilidades sociais com treinamento?
+    - O treinamento social é eficaz para autistas?
+    - O treinamento em habilidades sociais traz benefícios para autistas?
+    - Por que habilidades sociais são importantes para autistas?
+    - Como habilidades sociais podem ser treinadas para autistas?
+
+- intent: intent_88
+  examples: |
+    - O autismo pode ser associado a problemas de sono?
+    - Problemas de sono são comuns em pessoas com autismo?
+    - Autistas têm mais dificuldade para dormir?
+    - Como o autismo afeta o sono?
+    - Existe relação entre autismo e insônia?
+    - Pessoas com autismo enfrentam problemas para dormir?
+    - O sono é impactado pelo autismo?
+    - Quais são os problemas de sono comuns em autistas?
+
+- intent: intent_89
+  examples: |
+    - Como a terapia ocupacional pode apoiar a integração sensorial?
+    - A terapia ocupacional ajuda na integração sensorial de autistas?
+    - Autistas podem se beneficiar da terapia ocupacional para integração sensorial?
+    - Qual é o papel da terapia ocupacional na integração sensorial?
+    - A integração sensorial é importante para pessoas com autismo?
+    - Autistas melhoram a integração sensorial com terapia ocupacional?
+    - Como a terapia ocupacional auxilia em questões sensoriais para autistas?
+    - Por que a terapia ocupacional é recomendada para integração sensorial?
+
+- intent: intent_90
+  examples: |
+    - Qual é o papel das habilidades de comunicação alternativa no tratamento do autismo?
+    - A comunicação alternativa pode ajudar pessoas com autismo?
+    - Como habilidades de comunicação alternativa beneficiam autistas?
+    - Habilidades de comunicação alternativa são importantes para autistas?
+    - Autistas se beneficiam de comunicação alternativa?
+    - O que a comunicação alternativa oferece para autistas?
+    - Quais são os recursos de comunicação alternativa para autistas?
+    - A comunicação alternativa é uma ferramenta útil para autistas?
+
+- intent: intent_91
+  examples: |
+    - Como os terapeutas ajudam na gestão do comportamento em pessoas com autismo?
+    - A gestão de comportamento é parte do tratamento de autistas?
+    - Como o comportamento é gerido no tratamento do autismo?
+    - Autistas recebem ajuda na gestão de comportamento?
+    - Qual é o papel dos terapeutas na gestão de comportamento?
+    - Gestão de comportamento é importante para autistas?
+    - Autistas se beneficiam da gestão de comportamento?
+    - Terapeutas auxiliam no controle de comportamento em autistas?
+
+- intent: intent_92
+  examples: |
+    - Qual é a importância da abordagem multidisciplinar no tratamento do autismo?
+    - Uma abordagem multidisciplinar é eficaz para tratar autistas?
+    - Como a abordagem multidisciplinar ajuda no autismo?
+    - O tratamento de autismo se beneficia de uma abordagem multidisciplinar?
+    - O autismo é tratado melhor com equipes multidisciplinares?
+    - Abordagem multidisciplinar é recomendada para autistas?
+    - Em que casos a abordagem multidisciplinar é usada no autismo?
+    - Como diferentes especialidades contribuem para o tratamento de autistas?
+
+- intent: intent_93
+  examples: |
+    - Como as terapias de grupo podem beneficiar crianças com autismo?
+    - A terapia de grupo é benéfica para crianças autistas?
+    - Crianças com autismo se beneficiam da terapia em grupo?
+    - Terapias de grupo são recomendadas para crianças autistas?
+    - Em que situações a terapia de grupo é indicada para autistas?
+    - O que a terapia de grupo oferece para crianças com autismo?
+    - Terapia de grupo ajuda na socialização de crianças autistas?
+    - Quais são os objetivos da terapia de grupo para autistas?
+
+- intent: intent_94
+  examples: |
+    - Qual é o impacto do autismo no desenvolvimento acadêmico?
+    - O autismo afeta o desenvolvimento acadêmico?
+    - Como o autismo influencia o aprendizado escolar?
+    - Alunos autistas têm dificuldades no desenvolvimento acadêmico?
+    - Autistas enfrentam desafios acadêmicos específicos?
+    - Como o desenvolvimento acadêmico é afetado pelo autismo?
+    - Autismo impacta o desempenho escolar?
+    - Quais são os desafios acadêmicos comuns para autistas?
+
+- intent: intent_95
+  examples: |
+    - Como a terapia comportamental pode ajudar no desenvolvimento de habilidades de vida diária?
+    - A terapia comportamental apoia o desenvolvimento de habilidades cotidianas em autistas?
+    - Habilidades de vida diária são aprimoradas pela terapia comportamental?
+    - A terapia comportamental é eficaz para desenvolver habilidades práticas?
+    - Autistas podem desenvolver habilidades diárias com terapia comportamental?
+    - A terapia comportamental melhora habilidades de vida em autistas?
+    - Como a terapia comportamental ajuda no cotidiano de autistas?
+    - Quais habilidades práticas a terapia comportamental ensina para autistas?
+
+
+- intent: intent_96
+  examples: |
+    - Como a tecnologia assistiva pode ajudar na comunicação de pessoas com autismo?
+    - A tecnologia assistiva facilita a comunicação de autistas?
+    - Autistas podem melhorar sua comunicação com tecnologia assistiva?
+    - Quais dispositivos assistivos ajudam na comunicação de autistas?
+    - Como a tecnologia assistiva apoia autistas na expressão verbal?
+    - Tecnologia assistiva é recomendada para autistas?
+    - Que ferramentas de tecnologia ajudam na comunicação de autistas?
+    - Como dispositivos assistivos melhoram a comunicação em autistas?
+
+- intent: intent_97
+  examples: |
+    - Quais são as estratégias para melhorar a comunicação não verbal em pessoas com autismo?
+    - Como melhorar a comunicação não verbal em autistas?
+    - Quais estratégias ajudam autistas na comunicação não verbal?
+    - Autistas podem desenvolver comunicação não verbal?
+    - Como a comunicação não verbal é incentivada para autistas?
+    - Existem métodos para aprimorar a comunicação não verbal em autistas?
+    - Como autistas podem melhorar suas habilidades de comunicação não verbal?
+    - Técnicas de comunicação não verbal são úteis para autistas?
+
+- intent: intent_98
+  examples: |
+    - Qual é o papel do apoio psicológico no tratamento do autismo?
+    - Como o apoio psicológico ajuda no tratamento de autistas?
+    - Autistas se beneficiam do apoio psicológico?
+    - Qual a importância do apoio psicológico para autistas?
+    - O tratamento de autismo inclui apoio psicológico?
+    - Em que situações o apoio psicológico é indicado para autistas?
+    - Psicólogos desempenham um papel importante no tratamento de autistas?
+    - O apoio psicológico facilita o tratamento de autistas?
+
+- intent: intent_99
+  examples: |
+    - Como o suporte de pares pode beneficiar crianças com autismo?
+    - A interação com colegas ajuda crianças autistas?
+    - Suporte de pares é útil para crianças autistas?
+    - Crianças autistas se beneficiam de apoio de colegas?
+    - Qual é o papel do suporte de pares para crianças com autismo?
+    - O suporte de colegas é vantajoso para crianças autistas?
+    - Como colegas podem apoiar crianças com autismo?
+    - Quais são os benefícios do suporte de pares para crianças autistas?
+
+- intent: intent_100
+  examples: |
+    - Qual é a importância da adaptação de ambientes para pessoas com autismo?
+    - Adaptar o ambiente é importante para o bem-estar de autistas?
+    - Autistas se beneficiam de ambientes adaptados?
+    - Por que adaptar ambientes é importante para pessoas com autismo?
+    - Como ambientes adaptados impactam o conforto de autistas?
+    - A adaptação de ambientes melhora a qualidade de vida de autistas?
+    - Ambientes adaptados são necessários para autistas?
+    - Como a adaptação ambiental auxilia pessoas com autismo?
+
+- intent: intent_101
+  examples: |
+    - Como os pais podem ajudar na integração escolar de uma criança com autismo?
+    - De que forma os pais podem apoiar a integração escolar de crianças autistas?
+    - Pais podem ajudar na adaptação escolar de crianças autistas?
+    - A integração escolar de autistas é facilitada pelo apoio dos pais?
+    - Qual é o papel dos pais na inclusão escolar de autistas?
+    - Como os pais contribuem para a adaptação escolar de crianças autistas?
+    - Que ações os pais podem tomar para melhorar a integração escolar de autistas?
+    - Os pais são fundamentais para a integração escolar de crianças com autismo?
+
+- intent: intent_102
+  examples: |
+    - O que é uma abordagem centrada na família no tratamento do autismo?
+    - A abordagem centrada na família é útil no tratamento de autistas?
+    - Como a abordagem familiar auxilia no tratamento de autismo?
+    - Autistas se beneficiam de uma abordagem centrada na família?
+    - Qual a importância de envolver a família no tratamento de autistas?
+    - Abordagem familiar é recomendada para o tratamento de autismo?
+    - O que uma abordagem centrada na família oferece para autistas?
+    - A abordagem familiar melhora os resultados do tratamento de autistas?
+
+- intent: intent_103
+  examples: |
+    - Como a prática de habilidades sociais pode ser incorporada na rotina diária?
+    - Praticar habilidades sociais no dia a dia é útil para autistas?
+    - Como incluir práticas de habilidades sociais na rotina de autistas?
+    - Autistas podem desenvolver habilidades sociais com prática diária?
+    - Prática social diária é eficaz para autistas?
+    - Incorporar habilidades sociais na rotina é útil para autistas?
+    - A prática de habilidades sociais ajuda na adaptação de autistas?
+    - Habilidades sociais podem ser reforçadas na rotina de autistas?
+
+- intent: intent_104
+  examples: |
+    - Qual é o impacto do autismo na capacidade de iniciar e manter amizades?
+    - O autismo interfere na habilidade de criar e manter amizades?
+    - Autistas têm dificuldades para iniciar e manter amizades?
+    - A socialização de autistas é impactada na criação de amizades?
+    - Autistas podem ter desafios para manter amizades?
+    - Como o autismo afeta o desenvolvimento de amizades?
+    - Quais são as barreiras de autistas na criação de amizades?
+    - Manter amizades é um desafio para pessoas com autismo?
+
+- intent: intent_105
+  examples: |
+    - Como a terapia ocupacional pode ajudar na coordenação motora?
+    - A terapia ocupacional melhora a coordenação motora de autistas?
+    - Qual é o papel da terapia ocupacional na coordenação motora de autistas?
+    - Autistas podem melhorar a coordenação motora com terapia ocupacional?
+    - Como autistas se beneficiam da terapia ocupacional na coordenação?
+    - Terapia ocupacional é recomendada para coordenação motora em autistas?
+    - Em que aspectos a terapia ocupacional ajuda a coordenação de autistas?
+    - Autistas têm progresso na coordenação com terapia ocupacional?
+
+
+- intent: intent_106
+  examples: |
+    - Qual é a importância do apoio médico no tratamento do autismo?
+    - O apoio médico é fundamental no tratamento de autistas?
+    - Autistas precisam de suporte médico contínuo?
+    - Como o apoio médico contribui para o tratamento de autismo?
+    - O suporte médico é essencial para autistas?
+    - Como o apoio de profissionais de saúde ajuda autistas?
+    - Qual o papel dos médicos no tratamento de autismo?
+    - Autistas têm benefícios com acompanhamento médico regular?
+
+- intent: intent_107
+  examples: |
+    - Como a terapia de habilidades de vida pode ajudar na vida independente?
+    - A terapia de habilidades de vida contribui para a independência de autistas?
+    - Autistas podem alcançar independência com terapia de habilidades de vida?
+    - Como habilidades de vida são ensinadas para autistas na busca por autonomia?
+    - Terapias de habilidades de vida são úteis para autistas independentes?
+    - Autistas ganham mais independência com habilidades de vida?
+    - Quais são os benefícios das terapias de habilidades de vida para autistas?
+    - A terapia de habilidades de vida é importante para a autonomia de autistas?
+
+- intent: intent_108
+  examples: |
+    - Como o autismo pode afetar a capacidade de compreender o conceito de tempo?
+    - A compreensão do tempo é afetada pelo autismo?
+    - Autistas têm dificuldades em entender o conceito de tempo?
+    - Como o autismo interfere na percepção temporal?
+    - A noção de tempo pode ser prejudicada pelo autismo?
+    - Autistas precisam de suporte para compreender o conceito de tempo?
+    - A percepção de tempo é um desafio para pessoas com autismo?
+    - Como o autismo impacta a noção de tempo?
+
+- intent: intent_109
+  examples: |
+    - Qual é a importância de envolver os colegas na inclusão de uma criança com autismo?
+    - A inclusão dos colegas é importante para autistas na escola?
+    - Colegas podem contribuir para a inclusão de crianças autistas?
+    - O envolvimento de colegas facilita a inclusão de autistas?
+    - Como a escola pode promover a inclusão social de autistas?
+    - Autistas se beneficiam da inclusão promovida pelos colegas?
+    - A interação com colegas facilita a inclusão de autistas?
+    - Como colegas podem apoiar a inclusão de alunos com autismo?
+
+- intent: intent_110
+  examples: |
+    - Como a terapia de suporte educacional pode ajudar alunos com autismo?
+    - O suporte educacional é útil para o aprendizado de autistas?
+    - Autistas têm progresso com suporte educacional?
+    - A terapia de suporte educacional contribui para autistas na escola?
+    - Como o suporte educacional auxilia o desenvolvimento acadêmico de autistas?
+    - Suporte educacional é eficaz para ajudar autistas na aprendizagem?
+    - Qual é o papel do suporte educacional para alunos autistas?
+    - Autistas precisam de suporte educacional especializado?
+
+- intent: intent_111
+  examples: |
+    - Qual é o impacto do autismo no comportamento impulsivo?
+    - O autismo pode causar impulsividade?
+    - Autistas têm mais propensão a comportamentos impulsivos?
+    - Como o autismo interfere na impulsividade?
+    - A impulsividade é comum em autistas?
+    - O autismo afeta o controle de impulsos?
+    - Autistas demonstram comportamento impulsivo frequentemente?
+    - Quais são as causas da impulsividade no autismo?
+
+- intent: intent_112
+  examples: |
+    - Como as técnicas de modificação de comportamento podem ajudar no tratamento do autismo?
+    - A modificação de comportamento é eficaz para tratar o autismo?
+    - Como as técnicas comportamentais beneficiam autistas?
+    - Técnicas de modificação de comportamento ajudam no desenvolvimento de autistas?
+    - O autismo é tratado com modificação de comportamento?
+    - Técnicas de modificação de comportamento são aplicáveis para autistas?
+    - A modificação de comportamento ajuda autistas a melhorar habilidades sociais?
+    - Como modificar o comportamento impacta positivamente autistas?
+
+- intent: intent_113
+  examples: |
+    - Qual é o papel da escola na inclusão de alunos com autismo?
+    - Como a escola pode promover a inclusão de autistas?
+    - A escola desempenha um papel importante na inclusão de autistas?
+    - Como o sistema escolar contribui para a inclusão de alunos autistas?
+    - A escola pode facilitar a inclusão de crianças com autismo?
+    - Qual é o papel das escolas na inclusão de autistas?
+    - Alunos autistas precisam de apoio específico na escola?
+    - Como a escola apoia a inclusão de alunos com autismo?
+
+
+- intent: intent_114
+  examples: |
+    - Como o autismo pode afetar a habilidade de fazer escolhas e tomar decisões?
+    - O autismo interfere na tomada de decisões?
+    - Autistas têm dificuldade em tomar decisões?
+    - A habilidade de escolha é afetada pelo autismo?
+    - Como o autismo impacta o processo de tomada de decisões?
+    - Autistas podem ter desafios ao tomar decisões?
+    - A tomada de decisão é uma dificuldade comum para autistas?
+    - O autismo influencia a capacidade de tomar decisões?
+
+- intent: intent_115
+  examples: |
+    - Como a terapia baseada em jogo pode ajudar a desenvolver habilidades sociais?
+    - Jogos podem ajudar a desenvolver habilidades sociais em autistas?
+    - A terapia baseada em jogos beneficia autistas socialmente?
+    - Como o uso de jogos pode melhorar as habilidades sociais de autistas?
+    - Autistas se beneficiam de terapias baseadas em jogos?
+    - A terapia com jogos é indicada para desenvolver habilidades sociais?
+    - Quais são os benefícios dos jogos para habilidades sociais em autistas?
+    - Jogos são eficazes para ensinar habilidades sociais a autistas?
+
+- intent: intent_116
+  examples: |
+    - Qual é o impacto do autismo na percepção de perigo?
+    - O autismo pode afetar a percepção de situações de risco?
+    - Autistas têm dificuldade em perceber perigo?
+    - Como o autismo interfere na percepção de perigo?
+    - A capacidade de reconhecer riscos é afetada pelo autismo?
+    - Autistas podem subestimar situações de perigo?
+    - A percepção de risco é diferente em autistas?
+    - Como o autismo afeta a resposta a situações de risco?
+
+- intent: intent_117
+  examples: |
+    - Como a terapia de apoio emocional pode beneficiar pessoas com autismo?
+    - O apoio emocional é importante para autistas?
+    - Autistas se beneficiam de terapias de apoio emocional?
+    - Qual a importância do apoio emocional no tratamento de autismo?
+    - Como a terapia de apoio emocional auxilia autistas?
+    - Autistas precisam de suporte emocional durante o tratamento?
+    - Quais são os benefícios do apoio emocional para autistas?
+    - O apoio emocional ajuda autistas no desenvolvimento?
+
+- intent: intent_118
+  examples: |
+    - Como os programas de treinamento em habilidades de vida podem ser adaptados para pessoas com autismo?
+    - O treinamento em habilidades de vida pode ser adaptado para autistas?
+    - Como adaptar habilidades de vida para autistas?
+    - Programas de habilidades de vida são úteis para autistas?
+    - A adaptação de habilidades de vida é necessária para autistas?
+    - Como autistas podem aprender habilidades de vida de forma adaptada?
+    - A adaptação de habilidades de vida facilita a independência de autistas?
+    - Habilidades de vida adaptadas são eficazes para autistas?
+
+- intent: intent_119
+  examples: |
+    - O que são estratégias de ensino diferenciadas para alunos com autismo?
+    - Que estratégias diferenciadas de ensino beneficiam autistas?
+    - Como adaptar o ensino para alunos autistas?
+    - Estratégias diferenciadas ajudam no aprendizado de autistas?
+    - Quais são as técnicas de ensino especializadas para autistas?
+    - Ensinar autistas requer estratégias diferenciadas?
+    - Como o ensino pode ser personalizado para alunos com autismo?
+    - Quais são as abordagens específicas para ensinar autistas?
+
+- intent: intent_120
+  examples: |
+    - Qual é o impacto do autismo na habilidade de interpretar contextos sociais?
+    - O autismo afeta a interpretação de contextos sociais?
+    - Autistas têm dificuldade em entender situações sociais?
+    - Como o autismo interfere na compreensão social?
+    - A interpretação social é desafiadora para autistas?
+    - Autistas compreendem os contextos sociais de forma diferente?
+    - O autismo afeta a leitura de situações sociais?
+    - Como o autismo impacta o entendimento de interações sociais?
+
+- intent: intent_121
+  examples: |
+    - Como a terapia de habilidades adaptativas pode ajudar no desenvolvimento de autonomia?
+    - A terapia de habilidades adaptativas contribui para a autonomia de autistas?
+    - Autistas ganham autonomia com habilidades adaptativas?
+    - Como habilidades adaptativas são ensinadas para promover autonomia em autistas?
+    - A terapia de habilidades adaptativas promove independência?
+    - Habilidades adaptativas ajudam autistas a serem mais independentes?
+    - A terapia de habilidades adaptativas é útil para autistas?
+    - Autistas desenvolvem autonomia com habilidades adaptativas?
+
+
+- intent: intent_122
+  examples: |
+    - O autismo pode afetar a percepção de tempo?
+    - A percepção de tempo é influenciada pelo autismo?
+    - Autistas têm dificuldade em entender o tempo?
+    - Como o autismo afeta a noção de tempo?
+    - A compreensão do tempo é desafiadora para autistas?
+    - Autistas compreendem o tempo de forma diferente?
+    - O autismo interfere na percepção temporal?
+    - Autistas têm dificuldades com horários e prazos?
+
+- intent: intent_123
+  examples: |
+    - Como as intervenções comportamentais podem ajudar a melhorar o autocontrole em pessoas com autismo?
+    - As intervenções comportamentais são eficazes para melhorar o autocontrole em autistas?
+    - Autistas desenvolvem autocontrole com intervenções comportamentais?
+    - Intervenções comportamentais ajudam no autocontrole de autistas?
+    - Quais técnicas comportamentais são usadas para autocontrole de autistas?
+    - O autocontrole pode ser aprimorado em autistas com intervenções comportamentais?
+    - Autistas podem melhorar o autocontrole com terapias comportamentais?
+    - Como o autocontrole é trabalhado em autistas?
+
+- intent: intent_124
+  examples: |
+    - Qual é o papel do suporte de colegas e amigos no desenvolvimento social de pessoas com autismo?
+    - A interação com colegas contribui para o desenvolvimento social de autistas?
+    - Colegas e amigos ajudam autistas a desenvolver habilidades sociais?
+    - Autistas se beneficiam do apoio de colegas para socialização?
+    - Como o suporte de amigos impacta o desenvolvimento social de autistas?
+    - O apoio social de colegas melhora a integração de autistas?
+    - Amizades influenciam o desenvolvimento social de autistas?
+    - Como colegas podem auxiliar na socialização de autistas?
+
+- intent: intent_125
+  examples: |
+    - Como a terapia ocupacional pode apoiar a adaptação a mudanças na rotina?
+    - A terapia ocupacional ajuda autistas a lidar com mudanças na rotina?
+    - Autistas lidam melhor com mudanças na rotina com terapia ocupacional?
+    - A adaptação a novas rotinas é trabalhada na terapia ocupacional para autistas?
+    - Terapia ocupacional auxilia autistas com mudanças diárias?
+    - Como a terapia ocupacional prepara autistas para lidar com mudanças?
+    - A adaptação à rotina é um foco da terapia ocupacional para autistas?
+    - Autistas têm suporte para adaptar suas rotinas com terapia ocupacional?
+
+- intent: intent_126
+  examples: |
+    - Qual é a importância do planejamento e organização no tratamento do autismo?
+    - Planejamento e organização são essenciais no tratamento de autistas?
+    - O tratamento de autistas inclui técnicas de organização?
+    - Autistas se beneficiam de habilidades de planejamento?
+    - Como o planejamento auxilia no tratamento do autismo?
+    - A organização é importante para o desenvolvimento de autistas?
+    - Autistas aprendem a organizar atividades como parte do tratamento?
+    - O planejamento de atividades ajuda no progresso de autistas?
+
+- intent: intent_127
+  examples: |
+    - Como o treinamento em habilidades sociais pode ser incorporado em atividades cotidianas?
+    - As habilidades sociais podem ser praticadas no dia a dia para ajudar autistas?
+    - Atividades diárias podem ajudar no desenvolvimento social de autistas?
+    - Autistas se beneficiam de praticar habilidades sociais diariamente?
+    - Como o dia a dia auxilia no aprendizado de habilidades sociais para autistas?
+    - Práticas cotidianas de socialização ajudam no progresso de autistas?
+    - O treinamento de habilidades sociais faz parte da rotina de autistas?
+    - Como incluir o desenvolvimento social em atividades diárias de autistas?
+
+- intent: intent_128
+  examples: |
+    - O que são técnicas de ensino baseadas em evidências para autismo?
+    - Que métodos baseados em evidências são recomendados para ensinar autistas?
+    - Técnicas baseadas em evidências ajudam no aprendizado de autistas?
+    - Autistas aprendem melhor com métodos baseados em evidências?
+    - Como o ensino baseado em evidências beneficia autistas?
+    - Quais são as abordagens baseadas em evidências para ensinar autistas?
+    - O ensino de autistas deve ser baseado em evidências?
+    - Métodos baseados em evidências são eficazes para autistas?
+
+- intent: intent_129
+  examples: |
+    - Qual é o impacto do autismo na capacidade de comunicação não verbal?
+    - A comunicação não verbal é afetada pelo autismo?
+    - Autistas têm dificuldade com comunicação não verbal?
+    - Como o autismo interfere na comunicação não verbal?
+    - O autismo dificulta a compreensão de sinais não verbais?
+    - Autistas desenvolvem habilidades de comunicação não verbal de forma diferente?
+    - Como autistas lidam com expressões não verbais?
+    - A comunicação não verbal é um desafio para pessoas com autismo?
+
+
+- intent: intent_130
+  examples: |
+    - Como a terapia comportamental pode ajudar a desenvolver habilidades de resolução de problemas?
+    - A terapia comportamental é útil para autistas desenvolverem habilidades de resolução de problemas?
+    - Autistas conseguem melhorar a resolução de problemas com terapia comportamental?
+    - A terapia comportamental auxilia autistas em situações que exigem resolução de problemas?
+    - Como autistas aprendem a resolver problemas através da terapia comportamental?
+    - A resolução de problemas é trabalhada na terapia comportamental para autistas?
+    - Autistas se beneficiam da terapia comportamental para enfrentar desafios?
+    - Como a terapia comportamental ensina estratégias para resolver problemas?
+
+- intent: intent_131
+  examples: |
+    - Qual é o impacto do autismo na capacidade de compreender e responder a feedback?
+    - O autismo interfere na compreensão e resposta a feedback?
+    - Autistas têm dificuldade em processar e reagir a feedback?
+    - Como o autismo afeta a reação ao feedback?
+    - A habilidade de receber feedback é diferente para autistas?
+    - Autistas compreendem o feedback de forma diferente?
+    - Como o autismo impacta a resposta ao feedback?
+    - Autistas desenvolvem estratégias para lidar com feedback?
+
+- intent: intent_132
+  examples: |
+    - Como os pais podem ajudar no desenvolvimento de habilidades sociais em casa?
+    - De que forma os pais podem incentivar habilidades sociais de autistas em casa?
+    - Pais podem ensinar habilidades sociais aos filhos autistas?
+    - Como incluir o desenvolvimento social na rotina de autistas em casa?
+    - A prática de habilidades sociais pode ser feita em casa para autistas?
+    - Pais podem reforçar habilidades sociais no ambiente doméstico?
+    - Como os pais ajudam autistas a interagir socialmente?
+    - Atividades familiares podem desenvolver habilidades sociais em autistas?
+
+- intent: intent_133
+  examples: |
+    - Qual é a importância de uma abordagem personalizada no tratamento do autismo?
+    - Uma abordagem personalizada é eficaz para o tratamento de autistas?
+    - Como o tratamento personalizado beneficia autistas?
+    - Autistas respondem melhor a um tratamento individualizado?
+    - A abordagem personalizada é recomendada no autismo?
+    - Qual é o efeito de uma abordagem adaptada para autistas?
+    - A personalização do tratamento melhora o desenvolvimento de autistas?
+    - Autistas se beneficiam de uma abordagem de tratamento adaptada?
+
+- intent: intent_134
+  examples: |
+    - Como a terapia de habilidades de vida pode apoiar a preparação para a vida adulta?
+    - A terapia de habilidades de vida ajuda na transição para a vida adulta de autistas?
+    - Habilidades de vida preparam autistas para a independência?
+    - Como a terapia de vida diária auxilia na vida adulta de autistas?
+    - A independência de autistas é apoiada por habilidades de vida?
+    - A transição para a vida adulta é facilitada por habilidades de vida em autistas?
+    - Como habilidades de vida apoiam a independência de autistas?
+    - Autistas desenvolvem autonomia com habilidades de vida?
+
+- intent: intent_135
+  examples: |
+    - Qual é o impacto do autismo na capacidade de lidar com mudanças na rotina?
+    - O autismo pode dificultar a adaptação a mudanças na rotina?
+    - Autistas têm dificuldade em lidar com mudanças na rotina?
+    - Como o autismo interfere na adaptação a novas rotinas?
+    - A flexibilidade na rotina é um desafio para autistas?
+    - Mudanças de rotina causam desconforto em autistas?
+    - Autistas podem ser treinados para lidar com mudanças de rotina?
+    - Como o autismo afeta a resposta a alterações na rotina?
+
+- intent: intent_136
+  examples: |
+    - Como a terapia ocupacional pode ajudar no desenvolvimento de habilidades acadêmicas?
+    - A terapia ocupacional contribui para o desenvolvimento acadêmico de autistas?
+    - Autistas desenvolvem habilidades acadêmicas com a ajuda da terapia ocupacional?
+    - Como a terapia ocupacional é aplicada no contexto escolar para autistas?
+    - O desempenho acadêmico é melhorado pela terapia ocupacional em autistas?
+    - Terapia ocupacional auxilia na aprendizagem de autistas?
+    - Autistas ganham habilidades de estudo com terapia ocupacional?
+    - A terapia ocupacional apoia o desenvolvimento escolar de autistas?
+
+- intent: intent_137
+  examples: |
+    - Qual é o papel dos terapeutas na promoção da inclusão social de pessoas com autismo?
+    - Os terapeutas podem auxiliar na inclusão social de autistas?
+    - Como terapeutas promovem a integração de autistas em ambientes sociais?
+    - A inclusão social é facilitada por terapeutas para autistas?
+    - Como terapeutas ajudam autistas a interagir socialmente?
+    - A inclusão de autistas é promovida com apoio de terapeutas?
+    - Autistas recebem suporte de terapeutas para inclusão social?
+    - Terapeutas são fundamentais para a socialização de autistas?
+
+
+- intent: intent_138
+  examples: |
+    - Como o suporte familiar pode influenciar o sucesso do tratamento do autismo?
+    - O apoio da família é importante para o tratamento de autistas?
+    - A participação da família afeta o progresso de autistas no tratamento?
+    - Como o envolvimento familiar beneficia o tratamento de autistas?
+    - O tratamento de autistas é mais eficaz com apoio familiar?
+    - Famílias podem melhorar o desenvolvimento de autistas?
+    - Como o suporte familiar impacta o sucesso no tratamento de autistas?
+    - A presença dos familiares é essencial para o progresso de autistas?
+
+- intent: intent_139
+  examples: |
+    - Como a terapia de habilidades de vida pode ajudar na gestão de tarefas diárias?
+    - A terapia de habilidades de vida auxilia autistas no gerenciamento de tarefas diárias?
+    - Autistas podem desenvolver habilidades de vida para organizar tarefas?
+    - Como autistas aprendem a gerenciar atividades diárias com habilidades de vida?
+    - A gestão de tarefas diárias é facilitada pela terapia de habilidades de vida?
+    - Autistas melhoram a autonomia diária com habilidades de vida?
+    - Como a terapia de habilidades de vida contribui para a independência em tarefas diárias?
+    - O desenvolvimento de habilidades de vida auxilia autistas em suas atividades diárias?

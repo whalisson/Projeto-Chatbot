@@ -1,21 +1,89 @@
 version: "3.1"
+
 stories:
 - story: diagnose autism
   steps:
   - intent: diagnose_autism
   - action: utter_diagnose_autism
 
-- story: suggest therapy
+- story: suggest therapies
   steps:
   - intent: therapy_suggestions
   - action: utter_therapy_suggestions
 
-- story: communication tips
+- story: give communication tips
   steps:
   - intent: communication_tips
   - action: utter_communication_tips
 
-- story: emotional support
+- story: provide emotional support
   steps:
   - intent: emotional_support
   - action: utter_emotional_support
+
+- story: handle autism crisis
+  steps:
+  - intent: handle_autism_crisis
+  - action: utter_handle_autism_crisis
+  - action: action_ask_family_member
+
+- story: handle autism behavior
+  steps:
+  - intent: handle_autism_behavior
+  - action: utter_handle_autism_behavior
+
+- story: provide daily life support
+  steps:
+  - intent: daily_life_support
+  - action: utter_daily_life_support
+
+
+- story: handle school support
+  steps:
+  - intent: school_support
+  - action: utter_school_support
+
+- story: handle diet suggestions
+  steps:
+  - intent: diet_suggestions
+  - action: utter_diet_suggestions
+
+- story: handle sensory tips
+  steps:
+  - intent: sensory_tips
+  - action: utter_sensory_tips
+
+- story: handle sleep issues
+  steps:
+  - intent: sleep_issues
+  - action: utter_sleep_issues
+
+- story: handle medication autism
+  steps:
+  - intent: medication_autism
+  - action: utter_medication_autism
+
+- story: handle dealing with siblings
+  steps:
+  - intent: dealing_with_siblings
+  - action: utter_dealing_with_siblings
+
+- story: handle financial aid
+  steps:
+  - intent: financial_aid
+  - action: utter_financial_aid
+
+- story: handle meltdowns vs tantrums
+  steps:
+  - intent: meltdowns_vs_tantrums
+  - action: utter_meltdowns_vs_tantrums
+
+- story: handle autism education
+  steps:
+  - intent: autism_education
+  - action: utter_autism_education
+
+- story: handle legal rights
+  steps:
+  - intent: legal_rights
+  - action: utter_legal_rights

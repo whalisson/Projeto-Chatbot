@@ -5,54 +5,814 @@ intents:
   - therapy_suggestions
   - communication_tips
   - emotional_support
-  - nlu_fallback   # Intenção para fallback quando a confiança for baixa
   - handle_autism_crisis
   - handle_autism_behavior
   - daily_life_support
+  - nlu_fallback
+  - school_support
+  - diet_suggestions
+  - sensory_tips
+  - sleep_issues
+  - medication_autism
+  - dealing_with_siblings
+  - financial_aid
+  - meltdowns_vs_tantrums
+  - autism_education
+  - legal_rights
+  - ask_scientific_article
+  - intent_1
+  - intent_2
+  - intent_3
+  - intent_4
+  - intent_6
+  - intent_7
+  - intent_8
+  - intent_9
+  - intent_10
+  - intent_11
+  - intent_12
+  - intent_13
+  - intent_14
+  - intent_15
+  - intent_16
+  - intent_17
+  - intent_18
+  - intent_19
+  - intent_20
+  - intent_21
+  - intent_22
+  - intent_23
+  - intent_24
+  - intent_25
+  - intent_26
+  - intent_27
+  - intent_28
+  - intent_29
+  - intent_30
+  - intent_31
+  - intent_32
+  - intent_33
+  - intent_34
+  - intent_35
+  - intent_36
+  - intent_37
+  - intent_38
+  - intent_39
+  - intent_40
+  - intent_41
+  - intent_42
+  - intent_43
+  - intent_44
+  - intent_45
+  - intent_46
+  - intent_47
+  - intent_48
+  - intent_49
+  - intent_50
+  - intent_51
+  - intent_52
+  - intent_53
+  - intent_54
+  - intent_55
+  - intent_56
+  - intent_57
+  - intent_58
+  - intent_59
+  - intent_60
+  - intent_61
+  - intent_62
+  - intent_63
+  - intent_64
+  - intent_65
+  - intent_66
+  - intent_67
+  - intent_68
+  - intent_69
+  - intent_70
+  - intent_71
+  - intent_72
+  - intent_73
+  - intent_74
+  - intent_75
+  - intent_76
+  - intent_77
+  - intent_78
+  - intent_79
+  - intent_80
+  - intent_81
+  - intent_82
+  - intent_83
+  - intent_84
+  - intent_85
+  - intent_86
+  - intent_87
+  - intent_88
+  - intent_89
+  - intent_90
+  - intent_91
+  - intent_92
+  - intent_93
+  - intent_94
+  - intent_95
+  - intent_96
+  - intent_97
+  - intent_98
+  - intent_99
+  - intent_100
+  - intent_101
+  - intent_102
+  - intent_103
+  - intent_104
+  - intent_105
+  - intent_106
+  - intent_107
+  - intent_108
+  - intent_109
+  - intent_110
+  - intent_111
+  - intent_112
+  - intent_113
+  - intent_114
+  - intent_115
+  - intent_116
+  - intent_117
+  - intent_118
+  - intent_119
+  - intent_120
+  - intent_121
+  - intent_122
+  - intent_123
+  - intent_124
+  - intent_125
+  - intent_126
+  - intent_127
+  - intent_128
+  - intent_129
+  - intent_130
+  - intent_131
+  - intent_132
+  - intent_133
+  - intent_134
+  - intent_135
+  - intent_136
+  - intent_137
+  - intent_138
+  - intent_139
+  
+entities:
+  - family_member
+  - therapy_type
+  - age_group
+
+slots:
+  family_member:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: family_member
+
+  therapy_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: therapy_type
+
+  age_group:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: age_group
 
 responses:
   utter_diagnose_autism:
-    - text: |
-        O diagnóstico de autismo deve ser feito por um profissional de saúde especializado, 
-        como um pediatra ou neuropsicólogo. Alguns sinais podem incluir dificuldades na 
-        comunicação social e comportamentos repetitivos.
+    - text: "Os sinais de autismo podem variar, mas geralmente incluem dificuldades de comunicação, comportamentos repetitivos e interação social limitada. É importante procurar um especialista para um diagnóstico adequado."
 
   utter_therapy_suggestions:
-    - text: |
-        Existem várias terapias que podem ajudar crianças com autismo, como ABA (Análise Comportamental 
-        Aplicada), Terapia Ocupacional, Fonoaudiologia e Intervenção Comportamental. Consulte um 
-        especialista para saber o que é melhor para seu filho.
+    - text: "Terapias como {therapy_type}, terapia ocupacional e fonoaudiologia são algumas das opções mais recomendadas para pessoas com autismo."
 
   utter_communication_tips:
-    - text: |
-        Melhorar a comunicação pode ser um processo longo. Tente usar frases simples, oferecer escolhas 
-        visuais, e utilize sinais ou gestos. A terapia fonoaudiológica também pode ser bastante útil.
+    - text: "Para melhorar a comunicação com seu {family_member}, tente usar linguagem simples, reforço positivo e estímulos visuais."
 
   utter_emotional_support:
-    - text: |
-        Lidar com o autismo pode ser emocionalmente desafiador. É importante buscar apoio de grupos de 
-        pais, além de cuidar de sua saúde mental. Você não está sozinho nessa jornada.
+    - text: "Cuidar de si mesmo é essencial. Considere buscar apoio emocional, seja em grupos de suporte ou com profissionais especializados."
 
   utter_handle_autism_crisis:
-    - text: |
-        Durante uma crise de autismo, o mais importante é manter a calma. Algumas dicas incluem:
-        - Proporcionar um ambiente tranquilo e seguro.
-        - Evitar estímulos sensoriais que possam estar desencadeando a crise.
-        - Usar técnicas de conforto, como apertos suaves ou deixar a criança em um espaço seguro.
-        - Tentar identificar o que pode ter causado a crise e evitar punições.
-        Lembre-se de que cada criança é diferente, e pode ser útil conversar com um profissional especializado em comportamento para obter estratégias personalizadas.
-
-  utter_handle_autism_behavior:
-    - text: |
-        Comportamentos repetitivos e crises são comuns no autismo. Durante uma crise, é importante 
-        criar um ambiente seguro e tranquilo, evitar punições e buscar entender o que causou a crise.
+    - text: "Durante uma crise, mantenha a calma e tente fornecer um ambiente seguro para seu {family_member}. Estratégias como diminuir estímulos e usar técnicas de respiração podem ajudar."
 
   utter_daily_life_support:
-    - text: |
-        Para ajudar no dia a dia de uma criança com autismo, você pode incentivar a comunicação 
-        com brinquedos interativos, fornecer uma rotina estruturada e procurar suporte especializado, 
-        incluindo suporte financeiro e escolar.
+    - text: "Existem recursos que podem ajudar, como brinquedos sensoriais para {age_group}, além de suporte financeiro por meio de programas governamentais."
+
+  utter_handle_autism_behavior:
+    - text: "Comportamentos repetitivos ou agressivos podem ser uma forma de comunicação. Tente identificar os gatilhos e trabalhar com um profissional especializado para encontrar estratégias de manejo."
+
+  utter_school_support:
+    - text: "A escola pode oferecer adaptações, como acompanhamento individualizado e materiais adaptados para crianças com autismo. Converse com a direção da escola sobre possíveis recursos."
+
+  utter_diet_suggestions:
+    - text: "Alguns estudos indicam que uma alimentação balanceada e evitar certos alimentos, como aqueles ricos em açúcar, pode ajudar. Consulte um nutricionista especializado para recomendações personalizadas."
+
+  utter_sensory_tips:
+    - text: "Brinquedos sensoriais, como massas de modelar, luzes suaves e superfícies táteis, podem ajudar no desenvolvimento sensorial de {age_group}."
+
+  utter_sleep_issues:
+    - text: "Distúrbios do sono são comuns no autismo. Rotinas consistentes e criar um ambiente calmo podem ajudar a melhorar o sono de seu {family_member}."
+
+  utter_medication_autism:
+    - text: "Alguns medicamentos são usados para tratar sintomas específicos do autismo, como ansiedade ou hiperatividade. Consulte um médico para avaliar o que pode ser apropriado."
+
+  utter_dealing_with_siblings:
+    - text: "É importante explicar o autismo de forma simples para os irmãos e encorajá-los a serem parte do processo de apoio. Criar momentos de interação pode ajudar."
+
+  utter_financial_aid:
+    - text: "Existem benefícios sociais e financeiros disponíveis para famílias com crianças autistas. Consulte as agências locais para mais informações sobre os programas disponíveis."
+
+  utter_meltdowns_vs_tantrums:
+    - text: "Um colapso sensorial geralmente é uma reação involuntária a estímulos excessivos, enquanto uma birra é mais uma resposta comportamental a frustrações. Observe os gatilhos para entender melhor."
+
+  utter_autism_education:
+    - text: "Existem muitos recursos disponíveis sobre autismo. Livros como 'O Cérebro Autista' e cursos online podem ser úteis para aprender mais."
+
+  utter_legal_rights:
+    - text: "As crianças autistas têm direito a uma educação inclusiva. Consulte as leis de proteção à pessoa com deficiência e outros recursos legais disponíveis."
+
+  utter_intent_1:
+  - text: O autismo é um transtorno do desenvolvimento neurológico que afeta a comunicação,
+      o comportamento e a interação social. Também é conhecido como Transtorno do
+      Espectro Autista (TEA).
+  utter_intent_2:
+  - text: Os sinais de autismo podem incluir dificuldades na comunicação social, padrões
+      de comportamento repetitivos, interesses restritos e dificuldade em entender
+      normas sociais. Cada pessoa com autismo pode apresentar sinais de maneira diferente.
+  utter_intent_3:
+  - text: O diagnóstico do autismo é feito por profissionais de saúde mental especializados,
+      como psicólogos ou psiquiatras, através de avaliações comportamentais, entrevistas
+      e questionários. Não há um exame médico único para o diagnóstico.
+  utter_intent_4:
+  - text: Não existe uma cura para o autismo, mas vários tratamentos podem ajudar
+      a melhorar a qualidade de vida. Isso pode incluir terapia comportamental, terapia
+      ocupacional, fonoaudiologia e, em alguns casos, medicação para lidar com sintomas
+      específicos.
+
+  utter_intent_6:
+  - text: Pais podem apoiar uma criança com autismo proporcionando um ambiente estruturado,
+      utilizando técnicas de reforço positivo, participando de terapias recomendadas
+      e buscando redes de apoio e recursos especializados.
+  utter_intent_7:
+  - text: A síndrome de Asperger era anteriormente considerada uma condição separada,
+      mas agora é incluída no Transtorno do Espectro Autista (TEA). Pessoas com Asperger
+      têm habilidades verbais e cognitivas geralmente intactas, mas ainda enfrentam
+      desafios na interação social e comportamentos repetitivos.
+  utter_intent_8:
+  - text: O autismo não afeta apenas crianças; é uma condição ao longo da vida. Embora
+      os sinais possam se manifestar na infância, muitas pessoas continuam a ter necessidades
+      e características associadas ao autismo na vida adulta.
+  utter_intent_9:
+  - text: A prevalência do autismo varia entre os estudos, mas estima-se que afete
+      cerca de 1 em cada 54 crianças. As taxas podem ser influenciadas por fatores
+      como maior conscientização e diagnósticos mais precisos.
+  utter_intent_10:
+  - text: Sim, estratégias como o ensino estruturado, o uso de suporte visual, a aplicação
+      de métodos de ensino individualizados e a integração de terapias específicas
+      podem ser eficazes na educação de crianças com autismo.
+  utter_intent_11:
+  - text: Atualmente, não há testes pré-natais disponíveis para diagnosticar o autismo.
+      O diagnóstico geralmente ocorre após o nascimento, com base no comportamento
+      e desenvolvimento da criança.
+  utter_intent_12:
+  - text: A terapia ocupacional pode ajudar pessoas com autismo a desenvolver habilidades
+      motoras, habilidades de vida diária e estratégias para lidar com desafios sensoriais
+      e comportamentais.
+  utter_intent_13:
+  - text: Embora o autismo e o Transtorno do Déficit de Atenção e Hiperatividade (TDAH)
+      compartilhem alguns sintomas, como dificuldades de atenção e comportamentos
+      impulsivos, eles são condições distintas. O autismo é caracterizado por dificuldades
+      na comunicação e interação social, enquanto o TDAH é mais focado em problemas
+      de atenção e hiperatividade.
+  utter_intent_14:
+  - text: Habilidades sociais envolvem a capacidade de interagir e se comunicar efetivamente
+      com os outros. O autismo pode afetar essas habilidades, tornando difícil para
+      a pessoa entender e responder a sinais sociais, como expressões faciais e tom
+      de voz.
+  utter_intent_15:
+  - text: Não há medicamentos específicos para tratar o autismo, mas alguns medicamentos
+      podem ser usados para gerenciar sintomas associados, como ansiedade, depressão
+      ou hiperatividade.
+  utter_intent_16:
+  - text: Abordagens terapêuticas eficazes podem incluir a Análise Comportamental
+      Aplicada (ABA), terapia de integração sensorial, terapia fonoaudiológica e suporte
+      educacional especializado.
+  utter_intent_17:
+  - text: Não há uma dieta específica para o autismo, mas algumas pessoas podem experimentar
+      melhorias em seus sintomas ao seguir dietas específicas ou evitar certos alimentos.
+      É importante consultar um profissional de saúde antes de fazer mudanças significativas
+      na dieta.
+  utter_intent_18:
+  - text: A terapia comportamental, como a Análise Comportamental Aplicada (ABA),
+      ajuda a ensinar habilidades sociais, comunicativas e de vida diária através
+      de reforços positivos e treinamento estruturado.
+  utter_intent_19:
+  - text: O autismo é mais comum em meninos do que em meninas. A razão exata para
+      essa diferença de gênero não é completamente compreendida, mas pode envolver
+      fatores genéticos e biológicos.
+  utter_intent_20:
+  - text: A tecnologia pode ajudar pessoas com autismo através de aplicativos educativos,
+      dispositivos de comunicação assistiva e softwares que facilitam o aprendizado
+      e a comunicação.
+  utter_intent_21:
+  - text: Não há cura para o autismo, mas intervenções e tratamentos podem ajudar
+      a melhorar a qualidade de vida e a funcionalidade da pessoa.
+  utter_intent_22:
+  - text: O autismo pode ter um impacto significativo na vida familiar, exigindo ajustes
+      na rotina, no cuidado e na abordagem das necessidades da criança. O apoio familiar
+      e as redes de suporte são importantes para lidar com esses desafios.
+  utter_intent_23:
+  - text: Escolas podem apoiar crianças com autismo oferecendo adaptações curriculares,
+      suporte individualizado, treinamento para professores e criando um ambiente
+      inclusivo que atenda às necessidades específicas da criança.
+  utter_intent_24:
+  - text: Sim, pessoas com autismo podem ter condições associadas, como ansiedade,
+      depressão, transtornos de sono e problemas gastrointestinais. É importante tratar
+      essas condições para melhorar o bem-estar geral.
+  utter_intent_25:
+  - text: Estratégias de comunicação alternativa incluem o uso de dispositivos de
+      comunicação assistiva, como tablets com aplicativos de comunicação, pictogramas
+      e sistemas de comunicação por troca de imagens para ajudar pessoas com dificuldades
+      na fala.
+  utter_intent_26:
+  - text: Profissionais de saúde podem ajudar na gestão do autismo através de diagnósticos
+      precisos, recomendações de tratamentos, coordenação de cuidados e apoio à família
+      e à pessoa com autismo.
+  utter_intent_27:
+  - text: A intervenção precoce é fundamental para ajudar a melhorar os resultados
+      a longo prazo. Ela pode incluir terapias e suporte que abordam habilidades de
+      comunicação, comportamento e desenvolvimento social desde cedo.
+  utter_intent_28:
+  - text: Na vida adulta, pessoas com autismo podem enfrentar desafios relacionados
+      ao trabalho, à vida social e à independência. No entanto, com suporte adequado,
+      muitas pessoas com autismo podem levar uma vida satisfatória e produtiva.
+  utter_intent_29:
+  - text: O autismo tem uma forte componente genética, mas não é causado por um único
+      gene. Vários genes e fatores ambientais interagem para influenciar o risco de
+      desenvolver autismo.
+  utter_intent_30:
+  - text: Terapeutas ocupacionais trabalham com pessoas com autismo para melhorar
+      habilidades motoras, habilidades de vida diária e estratégias para lidar com
+      dificuldades sensoriais e comportamentais.
+  utter_intent_31:
+  - text: Abordagens educacionais incluem métodos individualizados de ensino, uso
+      de suporte visual, ensino baseado em competências e técnicas de modificação
+      comportamental.
+  utter_intent_32:
+  - text: A inclusão social é importante para pessoas com autismo, pois promove a
+      aceitação, reduz o estigma e oferece oportunidades para desenvolver habilidades
+      sociais e interagir com a comunidade.
+  utter_intent_33:
+  - text: O autismo pode afetar a comunicação de várias maneiras, incluindo dificuldades
+      na compreensão e uso da linguagem verbal e não verbal, além de desafios em iniciar
+      e manter conversas.
+  utter_intent_34:
+  - text: Um Plano Educacional Individualizado (PEI) é um documento que descreve as
+      necessidades educacionais específicas de uma criança com autismo e os serviços
+      e acomodações que serão fornecidos para atender a essas necessidades.
+  utter_intent_35:
+  - text: Habilidades de vida diária são fundamentais para a independência e a qualidade
+      de vida de pessoas com autismo. Essas habilidades incluem tarefas como higiene
+      pessoal, alimentação, e gerenciamento de dinheiro.
+  utter_intent_36:
+  - text: A terapia de integração sensorial ajuda pessoas com autismo a processar
+      e responder a estímulos sensoriais de maneira mais eficaz, melhorando a capacidade
+      de lidar com diferentes tipos de input sensorial.
+  utter_intent_37:
+  - text: A Análise Comportamental Aplicada (ABA) é uma abordagem terapêutica que
+      utiliza princípios de comportamento para ensinar habilidades e promover mudanças
+      positivas de comportamento em pessoas com autismo.
+  utter_intent_38:
+  - text: O autismo pode afetar o desenvolvimento social, dificultando a compreensão
+      de normas sociais, a leitura de pistas não verbais e a formação de relacionamentos
+      interpessoais.
+  utter_intent_39:
+  - text: Os pais podem encontrar recursos para autismo através de organizações especializadas,
+      grupos de apoio, profissionais de saúde, e sites educativos que fornecem informações
+      e suporte.
+  utter_intent_40:
+  - text: Estratégias de ensino baseadas em reforço positivo envolvem recompensar
+      comportamentos desejados para incentivar sua repetição. Essa abordagem é frequentemente
+      usada em terapia comportamental para ajudar a ensinar novas habilidades.
+  utter_intent_41:
+  - text: Sim, o autismo pode ser diagnosticado em adultos, especialmente se a pessoa
+      não foi diagnosticada na infância. O diagnóstico em adultos pode envolver avaliações
+      comportamentais e entrevistas sobre histórico e sintomas.
+  utter_intent_42:
+  - text: Terapias de linguagem podem ajudar pessoas com autismo a melhorar suas habilidades
+      de comunicação, incluindo a fala, a compreensão da linguagem e a comunicação
+      não verbal.
+  utter_intent_43:
+  - text: O impacto do autismo na vida profissional pode variar, mas algumas pessoas
+      podem enfrentar desafios relacionados a habilidades sociais, comunicação e adaptação
+      ao ambiente de trabalho. Suporte e acomodações podem ajudar a superar esses
+      desafios.
+  utter_intent_44:
+  - text: O autismo pode afetar a capacidade de aprendizagem ao influenciar a forma
+      como uma pessoa processa informações, se comunica e se envolve com o ambiente
+      de aprendizagem. Abordagens educacionais adaptadas podem ajudar a superar esses
+      desafios.
+  utter_intent_45:
+  - text: Habilidades de auto-regulação envolvem a capacidade de gerenciar emoções
+      e comportamentos de forma apropriada. O autismo pode afetar essas habilidades,
+      tornando difícil para a pessoa controlar suas reações emocionais e comportamentais.
+  utter_intent_46:
+  - text: O apoio familiar é crucial no tratamento do autismo, pois a família pode
+      fornecer suporte emocional, ajudar na implementação de estratégias de tratamento
+      e colaborar com profissionais de saúde para atender às necessidades da pessoa.
+  utter_intent_47:
+  - text: A terapia de comportamento pode ajudar a melhorar habilidades sociais ensinando
+      e reforçando comportamentos sociais apropriados, proporcionando oportunidades
+      para praticar habilidades e receber feedback sobre interações sociais.
+  utter_intent_48:
+  - text: Sim, o autismo pode ser associado a outras condições neuropsiquiátricas,
+      como transtornos de ansiedade, depressão e transtornos de sono. É importante
+      tratar essas condições associadas para melhorar o bem-estar geral.
+  utter_intent_49:
+  - text: Profissionais podem promover a inclusão de pessoas com autismo criando ambientes
+      acessíveis e acolhedores, adaptando abordagens de ensino e oferecendo suporte
+      para desenvolver habilidades sociais e de comunicação.
+  utter_intent_50:
+  - text: A terapia de habilidades sociais é uma abordagem terapêutica que ensina
+      e pratica habilidades necessárias para interações sociais bem-sucedidas, como
+      iniciar e manter conversas, interpretar sinais sociais e desenvolver amizades.
+  utter_intent_51:
+  - text: Desafios comuns enfrentados por adultos com autismo podem incluir dificuldades
+      no ambiente de trabalho, na vida social, na vida independente e no gerenciamento
+      de estresse e emoções.
+  utter_intent_52:
+  - text: A educação inclusiva pode beneficiar alunos com autismo ao proporcionar
+      um ambiente de aprendizado que valoriza a diversidade, oferece suporte individualizado
+      e promove a interação com colegas em um ambiente de sala de aula regular.
+  utter_intent_53:
+  - text: O autismo pode afetar a comunicação não verbal, tornando difícil para a
+      pessoa entender e usar expressões faciais, gestos e contato visual de maneira
+      adequada em interações sociais.
+  utter_intent_54:
+  - text: A terapia de integração sensorial ajuda a pessoa a processar e responder
+      a estímulos sensoriais de maneira mais eficaz, o que pode reduzir a sobrecarga
+      sensorial e melhorar a capacidade de lidar com diferentes tipos de input sensorial.
+  utter_intent_55:
+  - text: Programas de apoio para famílias podem oferecer recursos educativos, suporte
+      emocional, grupos de apoio e informações sobre como lidar com os desafios diários
+      associados ao autismo.
+  utter_intent_56:
+  - text: Sim, o autismo pode afetar o desenvolvimento motor, resultando em desafios
+      nas habilidades motoras finas e grossas, coordenação e planejamento motor.
+  utter_intent_57:
+  - text: Terapias baseadas em jogos podem beneficiar crianças com autismo ao tornar
+      o aprendizado mais envolvente e divertido, enquanto ensina habilidades sociais,
+      comunicação e comportamento através de atividades lúdicas.
+  utter_intent_58:
+  - text: O suporte escolar pode incluir adaptações no ambiente de aprendizagem, estratégias
+      de ensino personalizadas, assistência individualizada e colaboração com terapeutas
+      para atender às necessidades educacionais específicas do aluno com autismo.
+  utter_intent_59:
+  - text: A terapia de suporte familiar pode ajudar a fornecer orientação e recursos
+      para lidar com os desafios do autismo, melhorar a comunicação e a dinâmica familiar,
+      e oferecer estratégias para apoiar o desenvolvimento da criança.
+  utter_intent_60:
+  - text: Pessoas com autismo podem enfrentar desafios em ambientes sociais, como
+      dificuldades em interpretar sinais sociais, manter conversas e entender normas
+      sociais, o que pode levar a sentimentos de isolamento ou incompreensão.
+  utter_intent_61:
+  - text: A terapia fonoaudiológica pode ajudar a melhorar a comunicação verbal e
+      não verbal, desenvolver habilidades de linguagem, e abordar desafios relacionados
+      à articulação, compreensão e uso da linguagem.
+  utter_intent_62:
+  - text: Terapias de grupo para autismo envolvem sessões de terapia conduzidas em
+      grupo, onde as pessoas com autismo podem praticar habilidades sociais, interagir
+      com outras pessoas e receber feedback em um ambiente de apoio.
+  utter_intent_63:
+  - text: A análise funcional do comportamento é usada para identificar a causa de
+      comportamentos desafiadores e desenvolver estratégias para modificá-los, com
+      base em uma compreensão das funções e contextos desses comportamentos.
+  utter_intent_64:
+  - text: Sim, o autismo pode tornar difícil lidar com mudanças na rotina e no ambiente,
+      o que pode causar estresse e dificuldades. Estratégias de preparação e suporte
+      podem ajudar a gerenciar essas transições.
+  utter_intent_65:
+  - text: O treinamento em habilidades de vida pode ajudar pessoas com autismo a desenvolver
+      habilidades práticas e funcionais, como cuidado pessoal, gestão financeira e
+      habilidades de vida independente, para melhorar a qualidade de vida.
+  utter_intent_66:
+  - text: Abordagens de ensino baseadas em competências focam no desenvolvimento de
+      habilidades específicas e no ensino de competências de forma estruturada e sistemática,
+      adaptadas às necessidades e capacidades individuais do aluno com autismo.
+  utter_intent_67:
+  - text: Terapias baseadas em movimento, como terapia motora e atividades físicas
+      estruturadas, podem ajudar a melhorar a coordenação motora, o equilíbrio e a
+      consciência corporal, além de promover o bem-estar geral.
+  utter_intent_68:
+  - text: O autismo pode afetar a percepção sensorial, levando a hipersensibilidade
+      ou hipossensibilidade a estímulos como luzes, sons, texturas e cheiros, o que
+      pode influenciar a resposta e o comportamento da pessoa.
+  utter_intent_69:
+  - text: Pais podem se preparar para um diagnóstico de autismo educando-se sobre
+      a condição, buscando apoio e recursos, e colaborando com profissionais de saúde
+      para entender e gerenciar as necessidades da criança.
+  utter_intent_70:
+  - text: O autismo não é uma condição progressiva no sentido de que não piora com
+      o tempo, mas os sintomas podem mudar e evoluir ao longo da vida. Com intervenções
+      adequadas, muitas pessoas com autismo podem desenvolver habilidades e alcançar
+      seus objetivos.
+  utter_intent_71:
+  - text: A terapia cognitivo-comportamental pode ajudar pessoas com autismo a lidar
+      com problemas de comportamento, emoções e pensamentos disfuncionais, desenvolvendo
+      habilidades de enfrentamento e promovendo mudanças positivas.
+  utter_intent_72:
+  - text: Habilidades de resolução de problemas são importantes para ajudar pessoas
+      com autismo a enfrentar desafios diários, tomar decisões e encontrar soluções
+      para questões práticas e emocionais.
+  utter_intent_73:
+  - text: Grupos de apoio podem fornecer uma rede de suporte emocional, compartilhar
+      informações e estratégias, e oferecer um espaço para trocar experiências e conselhos
+      com outras famílias que enfrentam desafios semelhantes.
+  utter_intent_74:
+  - text: O autismo pode afetar a habilidade de leitura e escrita, com desafios como
+      dificuldades na compreensão de textos, organização das ideias e desenvolvimento
+      de habilidades de escrita. Abordagens educacionais personalizadas podem ajudar
+      a superar esses desafios.
+  utter_intent_75:
+  - text: O autismo pode afetar a interação com colegas ao dificultar a compreensão
+      e a prática de normas sociais, habilidades de comunicação e a formação de relacionamentos
+      interpessoais. Estratégias de ensino e suporte podem ajudar a melhorar essas
+      interações.
+  utter_intent_76:
+  - text: Um plano de intervenção individualizado é um documento que detalha as necessidades
+      específicas de uma pessoa com autismo e as estratégias e serviços que serão
+      utilizados para abordar essas necessidades e promover o desenvolvimento.
+  utter_intent_77:
+  - text: A terapia de comunicação pode ajudar a melhorar a expressão verbal através
+      de exercícios e técnicas que desenvolvem a fala, a articulação e a capacidade
+      de se comunicar de forma mais eficaz.
+  utter_intent_78:
+  - text: O autismo pode afetar a vida social de um adolescente, causando dificuldades
+      em formar amizades, entender dinâmicas sociais e participar de atividades sociais.
+      Apoio e intervenção podem ajudar a melhorar essas habilidades.
+  utter_intent_79:
+  - text: Técnicas de ensino visual, como o uso de quadros de rotina e pictogramas,
+      podem ajudar pessoas com autismo a compreender melhor as instruções, as expectativas
+      e a organizar tarefas de maneira mais clara e estruturada.
+  utter_intent_80:
+  - text: Programas de apoio à transição ajudam adultos com autismo a fazer a transição
+      para a vida adulta, oferecendo suporte em áreas como emprego, vida independente
+      e habilidades de vida diária.
+  utter_intent_81:
+  - text: O envolvimento dos pais é crucial no tratamento do autismo, pois eles podem
+      fornecer suporte emocional, colaborar com profissionais e implementar estratégias
+      de tratamento em casa para ajudar a melhorar os resultados da criança.
+  utter_intent_82:
+  - text: O autismo pode afetar a capacidade de processamento auditivo, levando a
+      dificuldades em filtrar e interpretar sons, o que pode influenciar a compreensão
+      da linguagem e a resposta a estímulos auditivos.
+  utter_intent_83:
+  - text: A terapia de habilidades de vida foca em ensinar habilidades práticas que
+      são essenciais para a independência e a qualidade de vida, como habilidades
+      de autocuidado, gerenciamento financeiro e habilidades sociais.
+  utter_intent_84:
+  - text: Terapias baseadas em evidências, como ABA e terapia de integração sensorial,
+      são eficazes porque se baseiam em pesquisas e dados para fornecer intervenções
+      que demonstram melhorar resultados para pessoas com autismo.
+  utter_intent_85:
+  - text: A terapia de suporte social foca em ajudar pessoas com autismo a desenvolver
+      e manter relacionamentos sociais, através de estratégias para melhorar habilidades
+      sociais e promover interações positivas com os outros.
+  utter_intent_86:
+  - text: O autismo pode afetar a capacidade de compreender expressões faciais, o
+      que pode dificultar a interpretação das emoções dos outros e a resposta adequada
+      em interações sociais.
+  utter_intent_87:
+  - text: O treinamento em habilidades sociais pode ajudar pessoas com autismo a melhorar
+      a comunicação, entender normas sociais, desenvolver amizades e lidar com situações
+      sociais de maneira mais eficaz.
+  utter_intent_88:
+  - text: Sim, pessoas com autismo podem ter problemas de sono, como dificuldades
+      em adormecer, manter o sono ou acordar cedo. Intervenções podem incluir estratégias
+      para melhorar a rotina de sono e ambientes de sono.
+  utter_intent_89:
+  - text: A terapia ocupacional pode apoiar a integração sensorial ajudando a pessoa
+      a processar e responder de maneira mais eficaz a estímulos sensoriais, através
+      de atividades e estratégias específicas.
+  utter_intent_90:
+  - text: Habilidades de comunicação alternativa são importantes para pessoas com
+      autismo que têm dificuldades na comunicação verbal, oferecendo métodos alternativos,
+      como dispositivos de comunicação assistiva e sistemas de troca de imagens.
+  utter_intent_91:
+  - text: Terapeutas ajudam na gestão do comportamento identificando os fatores que
+      contribuem para comportamentos desafiadores e desenvolvendo estratégias para
+      promover comportamentos positivos e reduzir comportamentos problemáticos.
+  utter_intent_92:
+  - text: Uma abordagem multidisciplinar é importante porque reúne profissionais de
+      diferentes áreas, como psicólogos, terapeutas ocupacionais e fonoaudiólogos,
+      para oferecer um tratamento mais abrangente e integrado.
+  utter_intent_93:
+  - text: Terapias de grupo podem beneficiar crianças com autismo ao proporcionar
+      oportunidades para socialização, prática de habilidades sociais e desenvolvimento
+      de interações em um ambiente estruturado e de apoio.
+  utter_intent_94:
+  - text: O autismo pode afetar o desenvolvimento acadêmico, com desafios como dificuldades
+      de atenção, processamento de informações e habilidades de organização. Suporte
+      educacional e estratégias personalizadas podem ajudar a superar esses desafios.
+  utter_intent_95:
+  - text: A terapia comportamental pode ajudar no desenvolvimento de habilidades de
+      vida diária ensinando habilidades práticas e utilizando reforços positivos para
+      promover a prática e a generalização dessas habilidades no dia a dia.
+  utter_intent_96:
+  - text: Tecnologia assistiva, como aplicativos de comunicação e dispositivos de
+      comunicação por troca de imagens, pode ajudar pessoas com autismo a expressar
+      suas necessidades, pensamentos e sentimentos de maneira mais eficaz.
+  utter_intent_97:
+  - text: Estratégias para melhorar a comunicação não verbal incluem o ensino e a
+      prática de habilidades como o uso de expressões faciais, gestos e contato visual,
+      além de atividades que reforcem a percepção e interpretação de sinais não verbais.
+  utter_intent_98:
+  - text: O apoio psicológico pode ajudar a pessoa com autismo a lidar com emoções,
+      estresse e desafios relacionados à condição, oferecendo estratégias para enfrentar
+      dificuldades e promover o bem-estar geral.
+  utter_intent_99:
+  - text: O suporte de pares pode beneficiar crianças com autismo ao promover a inclusão
+      social, facilitar a interação com outras crianças e oferecer oportunidades para
+      o desenvolvimento de habilidades sociais e amizades.
+  utter_intent_100:
+  - text: A adaptação de ambientes é importante para pessoas com autismo, pois pode
+      reduzir sobrecarga sensorial, oferecer um espaço mais confortável e acessível
+      e criar condições que favoreçam a participação e o bem-estar.
+  utter_intent_101:
+  - text: Os pais podem ajudar na integração escolar de uma criança com autismo colaborando
+      com a escola para criar um plano educacional individualizado, comunicando-se
+      com os professores e garantindo que a criança tenha o suporte necessário.
+  utter_intent_102:
+  - text: Uma abordagem centrada na família envolve trabalhar diretamente com a família
+      para desenvolver estratégias de tratamento e suporte que considerem as necessidades
+      e circunstâncias específicas da família e da pessoa com autismo.
+  utter_intent_103:
+  - text: A prática de habilidades sociais pode ser incorporada na rotina diária através
+      de atividades estruturadas, como jogos de papel, interações sociais planejadas
+      e oportunidades de prática em contextos naturais, como em casa e na escola.
+  utter_intent_104:
+  - text: O autismo pode dificultar a capacidade de iniciar e manter amizades devido
+      a desafios na compreensão de normas sociais, comunicação e interação. Apoio
+      e treinamento em habilidades sociais podem ajudar a melhorar essas capacidades.
+  utter_intent_105:
+  - text: A terapia ocupacional pode ajudar na coordenação motora através de atividades
+      que desenvolvem habilidades motoras finas e grossas, melhoram a coordenação
+      e promovem o controle motor e a consciência corporal.
+  utter_intent_106:
+  - text: O apoio médico é importante no tratamento do autismo para monitorar a saúde
+      geral, tratar condições associadas e colaborar com outros profissionais na criação
+      e implementação de planos de tratamento abrangentes.
+  utter_intent_107:
+  - text: A terapia de habilidades de vida pode ajudar na vida independente ao ensinar
+      e reforçar habilidades práticas necessárias para a vida diária, como cuidados
+      pessoais, gerenciamento financeiro e habilidades domésticas.
+  utter_intent_108:
+  - text: O autismo pode afetar a capacidade de compreender o conceito de tempo, tornando
+      difícil para a pessoa entender e organizar atividades de acordo com horários
+      e sequências temporais. Estratégias visuais e estruturas de rotina podem ajudar.
+  utter_intent_109:
+  - text: Envolver os colegas é importante para a inclusão de uma criança com autismo,
+      pois promove a aceitação, ajuda a criança a se sentir parte do grupo e facilita
+      a interação social e o desenvolvimento de amizades.
+  utter_intent_110:
+  - text: A terapia de suporte educacional pode ajudar alunos com autismo através
+      de adaptações curriculares, estratégias de ensino personalizadas e suporte adicional
+      para atender às necessidades educacionais específicas do aluno.
+  utter_intent_111:
+  - text: O autismo pode estar associado a comportamentos impulsivos devido a dificuldades
+      na regulação emocional e controle de impulsos. Intervenções comportamentais
+      e estratégias de apoio podem ajudar a gerenciar esses comportamentos.
+  utter_intent_112:
+  - text: Técnicas de modificação de comportamento podem ajudar no tratamento do autismo
+      ao identificar comportamentos problemáticos, desenvolver estratégias para reduzi-los
+      e promover comportamentos alternativos desejados através de reforços e consequências.
+  utter_intent_113:
+  - text: A escola desempenha um papel crucial na inclusão de alunos com autismo,
+      oferecendo um ambiente de aprendizagem acessível, estratégias de ensino adaptadas
+      e suporte individualizado para promover a participação e o sucesso acadêmico
+      do aluno.
+  utter_intent_114:
+  - text: O autismo pode afetar a habilidade de fazer escolhas e tomar decisões devido
+      a dificuldades na tomada de perspectiva e na avaliação de opções. Suporte e
+      treinamento podem ajudar a melhorar essas habilidades.
+  utter_intent_115:
+  - text: A terapia baseada em jogo pode ajudar a desenvolver habilidades sociais
+      ao proporcionar um ambiente divertido e engajador onde as crianças podem praticar
+      interações sociais, resolver problemas e aprender comportamentos sociais apropriados.
+  utter_intent_116:
+  - text: O autismo pode afetar a percepção de perigo, levando a uma subestimação
+      ou superestimação dos riscos. Estratégias de ensino e suporte podem ajudar a
+      melhorar a compreensão e a resposta a situações potencialmente perigosas.
+  utter_intent_117:
+  - text: A terapia de apoio emocional pode beneficiar pessoas com autismo ao oferecer
+      um espaço seguro para explorar e expressar emoções, desenvolver habilidades
+      de enfrentamento e promover o bem-estar emocional e psicológico.
+  utter_intent_118:
+  - text: Programas de treinamento em habilidades de vida podem ser adaptados para
+      pessoas com autismo usando abordagens visuais e práticas, reforços positivos
+      e estratégias individualizadas para atender às necessidades e capacidades específicas
+      de cada pessoa.
+  utter_intent_119:
+  - text: Estratégias de ensino diferenciadas para alunos com autismo incluem adaptações
+      no currículo, métodos de ensino personalizados e suporte individualizado para
+      atender às necessidades únicas de aprendizado e comunicação do aluno.
+  utter_intent_120:
+  - text: O autismo pode impactar a habilidade de interpretar contextos sociais, tornando
+      difícil para a pessoa entender nuances, intenções e significados implícitos
+      em interações sociais e ambientes.
+  utter_intent_121:
+  - text: A terapia de habilidades adaptativas pode ajudar no desenvolvimento de autonomia
+      ao ensinar e reforçar habilidades práticas e funcionais necessárias para a vida
+      independente, como organização, autocuidado e gerenciamento de tarefas.
+  utter_intent_122:
+  - text: Sim, o autismo pode afetar a percepção de tempo, resultando em dificuldades
+      para entender a passagem do tempo, seguir rotinas e planejar atividades de acordo
+      com cronogramas.
+  utter_intent_123:
+  - text: Intervenções comportamentais podem ajudar a melhorar o autocontrole em pessoas
+      com autismo ao ensinar estratégias de regulação emocional, oferecer reforços
+      para comportamentos apropriados e desenvolver habilidades de enfrentamento.
+  utter_intent_124:
+  - text: O suporte de colegas e amigos é fundamental para o desenvolvimento social
+      de pessoas com autismo, pois ajuda a promover a aceitação, facilita a interação
+      social e oferece oportunidades para praticar habilidades sociais e formar relacionamentos.
+  utter_intent_125:
+  - text: A terapia ocupacional pode apoiar a adaptação a mudanças na rotina ajudando
+      a pessoa a desenvolver estratégias de enfrentamento, criar rotinas adaptativas
+      e proporcionar práticas de habilidades para lidar com transições e mudanças.
+  utter_intent_126:
+  - text: O planejamento e organização são importantes no tratamento do autismo para
+      criar estruturas previsíveis, reduzir a ansiedade e facilitar a execução de
+      tarefas e atividades diárias.
+  utter_intent_127:
+  - text: O treinamento em habilidades sociais pode ser incorporado em atividades
+      cotidianas através de práticas em contextos naturais, como durante refeições,
+      jogos e interações diárias, além de usar situações da vida real para praticar
+      habilidades sociais.
+  utter_intent_128:
+  - text: Técnicas de ensino baseadas em evidências para autismo são métodos que têm
+      comprovação científica de eficácia, como a Análise Comportamental Aplicada (ABA)
+      e a Terapia de Integração Sensorial, e são utilizadas para promover o desenvolvimento
+      e melhorar a qualidade de vida.
+  utter_intent_129:
+  - text: O autismo pode impactar a capacidade de comunicação não verbal, dificultando
+      a compreensão e uso de expressões faciais, gestos e contato visual, o que pode
+      afetar a interação social e a comunicação com os outros.
+  utter_intent_130:
+  - text: A terapia comportamental pode ajudar a desenvolver habilidades de resolução
+      de problemas ao ensinar estratégias de enfrentamento, promover o pensamento
+      crítico e a tomada de decisões, e usar reforços para reforçar comportamentos
+      de resolução eficaz.
+  utter_intent_131:
+  - text: O autismo pode afetar a habilidade de compreender e responder a feedback,
+      levando a dificuldades em interpretar críticas e orientações e ajustar o comportamento
+      de acordo. Estratégias de ensino claras e apoio são importantes para melhorar
+      essa habilidade.
+  utter_intent_132:
+  - text: Os pais podem ajudar no desenvolvimento de habilidades sociais em casa criando
+      oportunidades para interações sociais, praticando habilidades através de jogos
+      e atividades estruturadas e oferecendo feedback positivo e orientação.
+  utter_intent_133:
+  - text: Uma abordagem personalizada é importante no tratamento do autismo para atender
+      às necessidades e características individuais de cada pessoa, adaptando intervenções
+      e estratégias de acordo com suas habilidades, desafios e preferências.
+  utter_intent_134:
+  - text: A terapia de habilidades de vida pode apoiar a preparação para a vida adulta
+      ao ensinar habilidades práticas necessárias para a independência, como gerenciamento
+      financeiro, habilidades de autocuidado e organização, e ajudar na transição
+      para a vida adulta.
+  utter_intent_135:
+  - text: O autismo pode impactar a capacidade de lidar com mudanças na rotina, causando
+      estresse e dificuldades de adaptação. Estratégias como preparações antecipadas
+      e suporte visual podem ajudar a facilitar a transição.
+  utter_intent_136:
+  - text: A terapia ocupacional pode ajudar no desenvolvimento de habilidades acadêmicas
+      ao fornecer suporte em áreas como coordenação motora fina, organização e planejamento,
+      e adaptação de estratégias de aprendizagem às necessidades individuais do aluno.
+  utter_intent_137:
+  - text: Os terapeutas desempenham um papel importante na promoção da inclusão social
+      de pessoas com autismo ao desenvolver e implementar estratégias que facilitam
+      a interação social, ajudam a construir habilidades sociais e promovem a participação
+      em atividades comunitárias.
+  utter_intent_138:
+  - text: O suporte familiar pode influenciar o sucesso do tratamento do autismo ao
+      fornecer um ambiente estável e encorajador, colaborar com profissionais e implementar
+      estratégias de tratamento em casa, além de oferecer suporte emocional.
+  utter_intent_139:
+  - text: A terapia de habilidades de vida pode ajudar na gestão de tarefas diárias
+      ao ensinar e praticar habilidades específicas necessárias para a vida cotidiana,
+      como organização, planejamento e execução de tarefas de forma eficiente.
+
 
 actions:
-  - action_ask_gemini  # Adicionada a action para integrar com o Google Gemini
-  - action_default_fallback  # fallback padrão
+  - action_ask_gemini  # Integrada com o Google Gemini (Exemplo)
+  # - action_default_fallback  # Action personalizada para fallback
+  - action_ask_family_member
+  - action_provide_scientific_info

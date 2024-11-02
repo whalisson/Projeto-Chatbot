@@ -1,42 +1,650 @@
 version: "3.1"
 
 rules:
-  - rule: Diagnóstico de autismo
-    steps:
-      - intent: diagnose_autism
-      - action: utter_diagnose_autism
+- rule: respond to diagnose autism
+  steps:
+  - intent: diagnose_autism
+  - action: utter_diagnose_autism
 
-  - rule: Sugestões de terapia
-    steps:
-      - intent: therapy_suggestions
-      - action: utter_therapy_suggestions
+- rule: respond to therapy suggestions
+  steps:
+  - intent: therapy_suggestions
+  - action: utter_therapy_suggestions
 
-  - rule: Dicas de comunicação
-    steps:
-      - intent: communication_tips
-      - action: utter_communication_tips
+- rule: respond to communication tips
+  steps:
+  - intent: communication_tips
+  - action: utter_communication_tips
 
-  - rule: Suporte emocional
-    steps:
-      - intent: emotional_support
-      - action: utter_emotional_support
+- rule: provide emotional support
+  steps:
+  - intent: emotional_support
+  - action: utter_emotional_support
 
-  - rule: Como lidar com crises de autismo
-    steps:
-      - intent: handle_autism_crisis
-      - action: utter_handle_autism_crisis
+- rule: respond to autism behavior
+  steps:
+  - intent: handle_autism_behavior
+  - action: utter_handle_autism_behavior
 
-  - rule: Handle fallback with Gemini
-    steps:
-      - intent: nlu_fallback  # Quando o modelo não reconhece a intenção
-      - action: action_ask_gemini  # Usa a API Gemini para gerar a resposta
-      
-  - rule: Responder sobre comportamento no autismo
-    steps:
-      - intent: handle_autism_behavior
-      - action: utter_handle_autism_behavior
+- rule: respond to daily life support
+  steps:
+  - intent: daily_life_support
+  - action: utter_daily_life_support
 
-  - rule: Responder sobre suporte no dia a dia
-    steps:
-      - intent: daily_life_support
-      - action: utter_daily_life_support
+- rule: Handle fallback with Gemini
+  steps:
+  - intent: nlu_fallback  # Quando o modelo não reconhece a intenção
+  - action: action_ask_gemini  # Usa a API Gemini para gerar a resposta
+
+# Regras integradas para as novas intents:
+
+- rule: respond to school support
+  steps:
+  - intent: school_support
+  - action: utter_school_support
+
+- rule: respond to diet suggestions
+  steps:
+  - intent: diet_suggestions
+  - action: utter_diet_suggestions
+
+- rule: respond to sensory tips
+  steps:
+  - intent: sensory_tips
+  - action: utter_sensory_tips
+
+- rule: respond to sleep issues
+  steps:
+  - intent: sleep_issues
+  - action: utter_sleep_issues
+
+- rule: respond to medication autism
+  steps:
+  - intent: medication_autism
+  - action: utter_medication_autism
+
+- rule: respond to dealing with siblings
+  steps:
+  - intent: dealing_with_siblings
+  - action: utter_dealing_with_siblings
+
+- rule: respond to financial aid
+  steps:
+  - intent: financial_aid
+  - action: utter_financial_aid
+
+- rule: respond to meltdowns vs tantrums
+  steps:
+  - intent: meltdowns_vs_tantrums
+  - action: utter_meltdowns_vs_tantrums
+
+- rule: respond to autism education
+  steps:
+  - intent: autism_education
+  - action: utter_autism_education
+
+- rule: respond to legal rights
+  steps:
+  - intent: legal_rights
+  - action: utter_legal_rights
+  
+- rule: respond with scientific article
+  steps:
+  - intent: ask_scientific_article
+  - action: action_provide_scientific_info
+
+# outras rules
+
+- rule: Respond to intent_1
+  steps:
+  - intent: intent_1
+  - action: utter_intent_1
+- rule: Respond to intent_2
+  steps:
+  - intent: intent_2
+  - action: utter_intent_2
+- rule: Respond to intent_3
+  steps:
+  - intent: intent_3
+  - action: utter_intent_3
+- rule: Respond to intent_4
+  steps:
+  - intent: intent_4
+  - action: utter_intent_4
+
+- rule: Respond to intent_6
+  steps:
+  - intent: intent_6
+  - action: utter_intent_6
+- rule: Respond to intent_7
+  steps:
+  - intent: intent_7
+  - action: utter_intent_7
+- rule: Respond to intent_8
+  steps:
+  - intent: intent_8
+  - action: utter_intent_8
+- rule: Respond to intent_9
+  steps:
+  - intent: intent_9
+  - action: utter_intent_9
+- rule: Respond to intent_10
+  steps:
+  - intent: intent_10
+  - action: utter_intent_10
+- rule: Respond to intent_11
+  steps:
+  - intent: intent_11
+  - action: utter_intent_11
+- rule: Respond to intent_12
+  steps:
+  - intent: intent_12
+  - action: utter_intent_12
+- rule: Respond to intent_13
+  steps:
+  - intent: intent_13
+  - action: utter_intent_13
+- rule: Respond to intent_14
+  steps:
+  - intent: intent_14
+  - action: utter_intent_14
+- rule: Respond to intent_15
+  steps:
+  - intent: intent_15
+  - action: utter_intent_15
+- rule: Respond to intent_16
+  steps:
+  - intent: intent_16
+  - action: utter_intent_16
+- rule: Respond to intent_17
+  steps:
+  - intent: intent_17
+  - action: utter_intent_17
+- rule: Respond to intent_18
+  steps:
+  - intent: intent_18
+  - action: utter_intent_18
+- rule: Respond to intent_19
+  steps:
+  - intent: intent_19
+  - action: utter_intent_19
+- rule: Respond to intent_20
+  steps:
+  - intent: intent_20
+  - action: utter_intent_20
+- rule: Respond to intent_21
+  steps:
+  - intent: intent_21
+  - action: utter_intent_21
+- rule: Respond to intent_22
+  steps:
+  - intent: intent_22
+  - action: utter_intent_22
+- rule: Respond to intent_23
+  steps:
+  - intent: intent_23
+  - action: utter_intent_23
+- rule: Respond to intent_24
+  steps:
+  - intent: intent_24
+  - action: utter_intent_24
+- rule: Respond to intent_25
+  steps:
+  - intent: intent_25
+  - action: utter_intent_25
+- rule: Respond to intent_26
+  steps:
+  - intent: intent_26
+  - action: utter_intent_26
+- rule: Respond to intent_27
+  steps:
+  - intent: intent_27
+  - action: utter_intent_27
+- rule: Respond to intent_28
+  steps:
+  - intent: intent_28
+  - action: utter_intent_28
+- rule: Respond to intent_29
+  steps:
+  - intent: intent_29
+  - action: utter_intent_29
+- rule: Respond to intent_30
+  steps:
+  - intent: intent_30
+  - action: utter_intent_30
+- rule: Respond to intent_31
+  steps:
+  - intent: intent_31
+  - action: utter_intent_31
+- rule: Respond to intent_32
+  steps:
+  - intent: intent_32
+  - action: utter_intent_32
+- rule: Respond to intent_33
+  steps:
+  - intent: intent_33
+  - action: utter_intent_33
+- rule: Respond to intent_34
+  steps:
+  - intent: intent_34
+  - action: utter_intent_34
+- rule: Respond to intent_35
+  steps:
+  - intent: intent_35
+  - action: utter_intent_35
+- rule: Respond to intent_36
+  steps:
+  - intent: intent_36
+  - action: utter_intent_36
+- rule: Respond to intent_37
+  steps:
+  - intent: intent_37
+  - action: utter_intent_37
+- rule: Respond to intent_38
+  steps:
+  - intent: intent_38
+  - action: utter_intent_38
+- rule: Respond to intent_39
+  steps:
+  - intent: intent_39
+  - action: utter_intent_39
+- rule: Respond to intent_40
+  steps:
+  - intent: intent_40
+  - action: utter_intent_40
+- rule: Respond to intent_41
+  steps:
+  - intent: intent_41
+  - action: utter_intent_41
+- rule: Respond to intent_42
+  steps:
+  - intent: intent_42
+  - action: utter_intent_42
+- rule: Respond to intent_43
+  steps:
+  - intent: intent_43
+  - action: utter_intent_43
+- rule: Respond to intent_44
+  steps:
+  - intent: intent_44
+  - action: utter_intent_44
+- rule: Respond to intent_45
+  steps:
+  - intent: intent_45
+  - action: utter_intent_45
+- rule: Respond to intent_46
+  steps:
+  - intent: intent_46
+  - action: utter_intent_46
+- rule: Respond to intent_47
+  steps:
+  - intent: intent_47
+  - action: utter_intent_47
+- rule: Respond to intent_48
+  steps:
+  - intent: intent_48
+  - action: utter_intent_48
+- rule: Respond to intent_49
+  steps:
+  - intent: intent_49
+  - action: utter_intent_49
+- rule: Respond to intent_50
+  steps:
+  - intent: intent_50
+  - action: utter_intent_50
+- rule: Respond to intent_51
+  steps:
+  - intent: intent_51
+  - action: utter_intent_51
+- rule: Respond to intent_52
+  steps:
+  - intent: intent_52
+  - action: utter_intent_52
+- rule: Respond to intent_53
+  steps:
+  - intent: intent_53
+  - action: utter_intent_53
+- rule: Respond to intent_54
+  steps:
+  - intent: intent_54
+  - action: utter_intent_54
+- rule: Respond to intent_55
+  steps:
+  - intent: intent_55
+  - action: utter_intent_55
+- rule: Respond to intent_56
+  steps:
+  - intent: intent_56
+  - action: utter_intent_56
+- rule: Respond to intent_57
+  steps:
+  - intent: intent_57
+  - action: utter_intent_57
+- rule: Respond to intent_58
+  steps:
+  - intent: intent_58
+  - action: utter_intent_58
+- rule: Respond to intent_59
+  steps:
+  - intent: intent_59
+  - action: utter_intent_59
+- rule: Respond to intent_60
+  steps:
+  - intent: intent_60
+  - action: utter_intent_60
+- rule: Respond to intent_61
+  steps:
+  - intent: intent_61
+  - action: utter_intent_61
+- rule: Respond to intent_62
+  steps:
+  - intent: intent_62
+  - action: utter_intent_62
+- rule: Respond to intent_63
+  steps:
+  - intent: intent_63
+  - action: utter_intent_63
+- rule: Respond to intent_64
+  steps:
+  - intent: intent_64
+  - action: utter_intent_64
+- rule: Respond to intent_65
+  steps:
+  - intent: intent_65
+  - action: utter_intent_65
+- rule: Respond to intent_66
+  steps:
+  - intent: intent_66
+  - action: utter_intent_66
+- rule: Respond to intent_67
+  steps:
+  - intent: intent_67
+  - action: utter_intent_67
+- rule: Respond to intent_68
+  steps:
+  - intent: intent_68
+  - action: utter_intent_68
+- rule: Respond to intent_69
+  steps:
+  - intent: intent_69
+  - action: utter_intent_69
+- rule: Respond to intent_70
+  steps:
+  - intent: intent_70
+  - action: utter_intent_70
+- rule: Respond to intent_71
+  steps:
+  - intent: intent_71
+  - action: utter_intent_71
+- rule: Respond to intent_72
+  steps:
+  - intent: intent_72
+  - action: utter_intent_72
+- rule: Respond to intent_73
+  steps:
+  - intent: intent_73
+  - action: utter_intent_73
+- rule: Respond to intent_74
+  steps:
+  - intent: intent_74
+  - action: utter_intent_74
+- rule: Respond to intent_75
+  steps:
+  - intent: intent_75
+  - action: utter_intent_75
+- rule: Respond to intent_76
+  steps:
+  - intent: intent_76
+  - action: utter_intent_76
+- rule: Respond to intent_77
+  steps:
+  - intent: intent_77
+  - action: utter_intent_77
+- rule: Respond to intent_78
+  steps:
+  - intent: intent_78
+  - action: utter_intent_78
+- rule: Respond to intent_79
+  steps:
+  - intent: intent_79
+  - action: utter_intent_79
+- rule: Respond to intent_80
+  steps:
+  - intent: intent_80
+  - action: utter_intent_80
+- rule: Respond to intent_81
+  steps:
+  - intent: intent_81
+  - action: utter_intent_81
+- rule: Respond to intent_82
+  steps:
+  - intent: intent_82
+  - action: utter_intent_82
+- rule: Respond to intent_83
+  steps:
+  - intent: intent_83
+  - action: utter_intent_83
+- rule: Respond to intent_84
+  steps:
+  - intent: intent_84
+  - action: utter_intent_84
+- rule: Respond to intent_85
+  steps:
+  - intent: intent_85
+  - action: utter_intent_85
+- rule: Respond to intent_86
+  steps:
+  - intent: intent_86
+  - action: utter_intent_86
+- rule: Respond to intent_87
+  steps:
+  - intent: intent_87
+  - action: utter_intent_87
+- rule: Respond to intent_88
+  steps:
+  - intent: intent_88
+  - action: utter_intent_88
+- rule: Respond to intent_89
+  steps:
+  - intent: intent_89
+  - action: utter_intent_89
+- rule: Respond to intent_90
+  steps:
+  - intent: intent_90
+  - action: utter_intent_90
+- rule: Respond to intent_91
+  steps:
+  - intent: intent_91
+  - action: utter_intent_91
+- rule: Respond to intent_92
+  steps:
+  - intent: intent_92
+  - action: utter_intent_92
+- rule: Respond to intent_93
+  steps:
+  - intent: intent_93
+  - action: utter_intent_93
+- rule: Respond to intent_94
+  steps:
+  - intent: intent_94
+  - action: utter_intent_94
+- rule: Respond to intent_95
+  steps:
+  - intent: intent_95
+  - action: utter_intent_95
+- rule: Respond to intent_96
+  steps:
+  - intent: intent_96
+  - action: utter_intent_96
+- rule: Respond to intent_97
+  steps:
+  - intent: intent_97
+  - action: utter_intent_97
+- rule: Respond to intent_98
+  steps:
+  - intent: intent_98
+  - action: utter_intent_98
+- rule: Respond to intent_99
+  steps:
+  - intent: intent_99
+  - action: utter_intent_99
+- rule: Respond to intent_100
+  steps:
+  - intent: intent_100
+  - action: utter_intent_100
+- rule: Respond to intent_101
+  steps:
+  - intent: intent_101
+  - action: utter_intent_101
+- rule: Respond to intent_102
+  steps:
+  - intent: intent_102
+  - action: utter_intent_102
+- rule: Respond to intent_103
+  steps:
+  - intent: intent_103
+  - action: utter_intent_103
+- rule: Respond to intent_104
+  steps:
+  - intent: intent_104
+  - action: utter_intent_104
+- rule: Respond to intent_105
+  steps:
+  - intent: intent_105
+  - action: utter_intent_105
+- rule: Respond to intent_106
+  steps:
+  - intent: intent_106
+  - action: utter_intent_106
+- rule: Respond to intent_107
+  steps:
+  - intent: intent_107
+  - action: utter_intent_107
+- rule: Respond to intent_108
+  steps:
+  - intent: intent_108
+  - action: utter_intent_108
+- rule: Respond to intent_109
+  steps:
+  - intent: intent_109
+  - action: utter_intent_109
+- rule: Respond to intent_110
+  steps:
+  - intent: intent_110
+  - action: utter_intent_110
+- rule: Respond to intent_111
+  steps:
+  - intent: intent_111
+  - action: utter_intent_111
+- rule: Respond to intent_112
+  steps:
+  - intent: intent_112
+  - action: utter_intent_112
+- rule: Respond to intent_113
+  steps:
+  - intent: intent_113
+  - action: utter_intent_113
+- rule: Respond to intent_114
+  steps:
+  - intent: intent_114
+  - action: utter_intent_114
+- rule: Respond to intent_115
+  steps:
+  - intent: intent_115
+  - action: utter_intent_115
+- rule: Respond to intent_116
+  steps:
+  - intent: intent_116
+  - action: utter_intent_116
+- rule: Respond to intent_117
+  steps:
+  - intent: intent_117
+  - action: utter_intent_117
+- rule: Respond to intent_118
+  steps:
+  - intent: intent_118
+  - action: utter_intent_118
+- rule: Respond to intent_119
+  steps:
+  - intent: intent_119
+  - action: utter_intent_119
+- rule: Respond to intent_120
+  steps:
+  - intent: intent_120
+  - action: utter_intent_120
+- rule: Respond to intent_121
+  steps:
+  - intent: intent_121
+  - action: utter_intent_121
+- rule: Respond to intent_122
+  steps:
+  - intent: intent_122
+  - action: utter_intent_122
+- rule: Respond to intent_123
+  steps:
+  - intent: intent_123
+  - action: utter_intent_123
+- rule: Respond to intent_124
+  steps:
+  - intent: intent_124
+  - action: utter_intent_124
+- rule: Respond to intent_125
+  steps:
+  - intent: intent_125
+  - action: utter_intent_125
+- rule: Respond to intent_126
+  steps:
+  - intent: intent_126
+  - action: utter_intent_126
+- rule: Respond to intent_127
+  steps:
+  - intent: intent_127
+  - action: utter_intent_127
+- rule: Respond to intent_128
+  steps:
+  - intent: intent_128
+  - action: utter_intent_128
+- rule: Respond to intent_129
+  steps:
+  - intent: intent_129
+  - action: utter_intent_129
+- rule: Respond to intent_130
+  steps:
+  - intent: intent_130
+  - action: utter_intent_130
+- rule: Respond to intent_131
+  steps:
+  - intent: intent_131
+  - action: utter_intent_131
+- rule: Respond to intent_132
+  steps:
+  - intent: intent_132
+  - action: utter_intent_132
+- rule: Respond to intent_133
+  steps:
+  - intent: intent_133
+  - action: utter_intent_133
+- rule: Respond to intent_134
+  steps:
+  - intent: intent_134
+  - action: utter_intent_134
+- rule: Respond to intent_135
+  steps:
+  - intent: intent_135
+  - action: utter_intent_135
+- rule: Respond to intent_136
+  steps:
+  - intent: intent_136
+  - action: utter_intent_136
+- rule: Respond to intent_137
+  steps:
+  - intent: intent_137
+  - action: utter_intent_137
+- rule: Respond to intent_138
+  steps:
+  - intent: intent_138
+  - action: utter_intent_138
+- rule: Respond to intent_139
+  steps:
+  - intent: intent_139
+  - action: utter_intent_139

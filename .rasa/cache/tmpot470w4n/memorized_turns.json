@@ -1,0 +1,21 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJxdjVEKwzAMQ6+SA5Sx/eYqoYRsc8EQ2yFxCyPk7nPXMsb+LEt6Cn1MrpcKW0wPRWHv+nFETgTenSJjU2DLtizaLAS8YRUmYPUu3C7XeXJLIsyvSEB3qN+viuRTWH9tu2V1RUUwUvgh/SGOriGQ9bPzTLuZcYHY1lKk6hjzGx2ZRz0=": "utter_daily_life_support",
+    "eJzNj00KAjEMha/SAwyi216lDKVqBgJtUtp0QMrc3cwPIiK4dZeXl/clcX0ZTM8FZh9ugkzW9L3wFBJYc4iIVYB0tkaWqkNAMxamBCTWuMvpPA5mCgnjwydIVyivrjDHQ2i+1dXSuKAgKMm9kT4Qe1YRSLLtuYfVjDiBry1nLrL8OL+JQPFfcn/4yfgEuM+Rfg==": "action_listen",
+    "eJxVzFEKAjEMBNCr5ACL6G+vUkqJa2QDTVaarCCldzeiP/7NMI/JYy4wHp2eFVfnXROMb6iKQgl+pbE5aVhru1ugOwq3VxWSK/UE+XI6l5gP+7RB6uxMAfMfLAuwxpEn2FBvjSoeziZ17Wxsc5Y3ePI2oQ==": "utter_handle_autism_crisis",
+    "eJy1jsEKAjEMRH8lH7CIXvsrpYS6Rgy0WWlSQcr+u1n0Igh78jbDvBkmjnWCcW/0wDwbLxJgvAVKrhTgYwqrkTirZTF16JorlydWqmdqAeLpcEwed93cIDE2JgfjF5gmYPEhC3DLcimEuRtrxbmxsq47Z7oZNfzZ/Puz9ALw43EC": "action_listen",
+    "eJxdzDEKwzAMheGr6AChtKuvYowxQYPAkY31ksX47lVoh9JNj/9Dca6NZh985bJDmgaanyNrOTjQd1QxsLq12mCO+Gh3KDUbChzG1+OZHJzG4+4KgbDT+EfTRqL+DIF+ytl7G1grvQHJMTd5": "utter_emotional_support",
+    "eJy1zjEKwzAMBdCr6AChtKuvYowxQYPAkY393cXk7lVoh5IMnbpJ/Cfx/dwXmrXxM6YVUtTRfA9R08aOPkuWDlazPRd0Q7yVI0g5diQY9I/bPRgYnduRKwTCRv2JhoVE7RkcfSWj1tKw/2gzAG7xevb/XuEFBMhxrA==": "action_listen",
+    "eJxNzUEKhDAMBdCr5AAy6LZXKaUUCRrQWJooSOndzaCCu/z8R+Jr66DmgkdMo9LGDuo9RE4rOnjCQqLIZmXZVAzpjCXlM+qZTfnh1wdrd8FiJbKSEprzXxc6ILYz6uBdyz5NKP8X0lq4AOtsNfg=": "utter_therapy_suggestions",
+    "eJy1jsEKAjEMRH8lH7CIXvsrpZQiYQ2s2dJMhaXsvxtRwYPgyVuSeTOZOPaJRm18y+UMWTXQeA5Zy5UDvZZFDKzO2rLCHMKFW6lbxladiqfDMbnajZuLrBAIOxc/uTSRqMcg0PtsfZ7ZHi9s/9GkA9zyN+N/W6U7ZzxvfQ==": "action_listen",
+    "eJw1y1EKhDAMBNCr5AAi7m+vUkrJrgEDNV1M9Kf07ga0fzPMm9j6BO1/0JXxZ1wlQHtCFtwpwFsKq5G41VJNHX1pw4vrESB+5iX5cip5ayTGxuQmDpMmYPG7BdhQ1kIZT2Pd8wC9pxu8hTNS": "utter_handle_autism_behavior",
+    "eJy1zjEKwzAMBdCr6AChtKuvYoxQWkEEjhxsOYvJ3StoMpZO3fTR+/DjOCYYW+Ud6WlSNMD4HKi0coAzZGnG6rblYs3RzAvtUmqA+Ljdk396Y0+D1cSE3cTLpAlEvW4BFtJXZqRu0la8wPFjRDfjil+6f9uU3pmJayc=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohL6c0Pi0xJycpMTm7tjYWALS1Hkw=": "utter_default",
+    "eJyFjMEJgDAMAFfJAE7QVURCrCkUY5Q28VO6uwX9+7uD4+bWJ2hX4RspWj41QHsBlQ4O8Inkaqyj9cplNFmHWgAVx0QiK8W9/6zcjAtunMjF/lbLA8myOvM=": "action_listen",
+    "eJxVzFEKAjEMBNCr5ACLrL+9SiklapRAky6brCCldzeiP/7NMI/JYy4wtp2eFa/OXROMb6iKQgl+pbE5aVhr3S3QHYXbqwrJhfYE+XxaS8yHfdogdXamgPkPlgVY48gT3Bgf2o0qHs4mc5Y3bPQ0kw==": "utter_diagnose_autism",
+    "eJy1jkEKQjEMRK+SA3xEt71KKSVq/ASaVJpUkPLvbkU3unHlboZ5M0wc2wLj2uiW8eRcNcB4iawoFOBtCpuTTtZKdZvQBYXLPQvJkVqAeNjt04y7Pd0gdXamCcYPMC3AOoc8wJlx1WqUsTubbD9+dHdq+bv0zz/pAVOEatg=": "action_listen",
+    "eJxVjEEKwzAMBL+iB4TSXP0VY4xrVBBYcoiUQjH+e9Wkl9522GHimAuMbcdXLtWoS4BxjSyFMcAPGqmhuKutm7r0LEztnRn5gXuAuN7uye9DvzRQjIzQxfgnpgVIPGQBamc+hGo5+0abzpk+Dpc17A==": "utter_communication_tips",
+    "eJy1jksKAzEMQ6/iAwyl3eYqIYQ0uGCInSFxCiXM3et+NoXCrGYnoSchP7cF5trwHlNWquJgfkSUxOjgawp1RTG2l6rdoFtiKo/IyFdsDvzldA4Wj/5yE0VJCQ30P2BYgMSG1EGuzEMop/e+0tq3nStDFVv80zv4VXgCYqRu4w==": "action_listen"
+  }
+}
