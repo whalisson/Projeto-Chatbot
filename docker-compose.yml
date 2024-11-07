@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  rasa:
+    image: rasa/rasa:latest-full
+    volumes:
+      - ./app:/app
+      - rasa_cache:/app/.rasa
+    ports:
+      - "5005:5005"
+    command: >
+      bash -c "rasa train && rasa run --enable-api --cors '*' --port 5005"
+
+volumes:
+  rasa_cache:
