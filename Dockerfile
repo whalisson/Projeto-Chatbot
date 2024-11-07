@@ -6,11 +6,8 @@ WORKDIR /app
 # Copia o conteúdo do projeto para o diretório de trabalho no container
 COPY . /app
 
-# Copia o modelo SpaCy local para o ambiente do Docker
-COPY spacy_models/pt_core_news_md /usr/local/lib/python3.10/site-packages/spacy/data/pt_core_news_md
-
-# Configura a variável de ambiente para o SpaCy localizar o modelo
-ENV SPACY_DATA_PATH=/usr/local/lib/python3.10/site-packages/spacy/data
+# Instala as dependências do requirements.txt, incluindo o modelo SpaCy
+RUN pip install -r requirements.txt
 
 # Treina o modelo do Rasa
 RUN rasa train
