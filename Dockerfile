@@ -1,31 +1,28 @@
-# Usa uma imagem base com Python 3.10
+# Usar a imagem oficial do Python 3.10
 FROM python:3.10-slim
 
-# Configura o diretório de trabalho
+# Definir o diretório de trabalho
 WORKDIR /app
 
-# Copia os arquivos do projeto para o container
-COPY . /app
+# Atualizar o pip para a versão mais recente
+RUN pip install --no-cache-dir --upgrade pip
 
-# Atualiza o pip e instala as dependências necessárias para o Rasa
-RUN pip install --upgrade pip
-
-# Instala pacotes de compilação e outras dependências de sistema
+# Instalar dependências do sistema necessárias
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libssl-dev \
-    libffi-dev \
-    python3-dev \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
-# Instala o Rasa e outras dependências específicas
-RUN pip install rasa==3.6.20 spacy==3.7.6
+# Instalar o Rasa
+RUN pip install --no-cache-dir rasa==3.6.20
 
-# Instala as dependências do projeto do requirements.txt
+# Copiar arquivos do projeto para o container
+COPY . /app
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Treina o modelo Rasa (opcional)
-RUN rasa train
+# Expor a porta padrão do Rasa
+EXPOSE 5005
 
-# Executa o servidor do Rasa
+# Definir o comando para iniciar o servidor Rasa
 CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]

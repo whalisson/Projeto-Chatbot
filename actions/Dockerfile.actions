@@ -1,0 +1,24 @@
+# Usar a imagem base oficial do Rasa SDK
+FROM python:3.10-slim
+
+# Definir o diretório de trabalho
+WORKDIR /app/actions
+
+
+# Atualizar o pip
+RUN pip install --no-cache-dir --upgrade pip
+
+# Instalar o rasa-sdk
+RUN pip install --no-cache-dir rasa-sdk==3.6.0
+
+# Copiar os arquivos das actions para o contêiner
+COPY  . /app/actions
+
+# Instalar as dependências das actions
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expor a porta padrão do servidor de actions
+EXPOSE 5055
+
+# Comando para iniciar o servidor de actions
+CMD ["python", "-m", "rasa_sdk", "--actions", "actions", "--port", "5055"]
