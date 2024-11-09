@@ -27,6 +27,7 @@ services:
       - "*"
       - "--port"
       - "5005"
+    restart: "no"
 
   actions:
     build:
@@ -42,3 +43,4 @@ services:
     # entrypoint: []
 
     command: "python -m rasa_sdk --actions actions --port 5055"
+    
