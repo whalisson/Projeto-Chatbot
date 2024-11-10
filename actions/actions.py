@@ -10,7 +10,7 @@ from typing import Any, Text, Dict, List
 load_dotenv()
 
 # Configurar a API do Gemini
-genai.configure(api_key=os.getenv("API_KEY"))
+genai.configure(api_key="AIzaSyDg3PpT0ZDXUx5LCYANQahCRgaBQqw4_pI")
 
 class ActionAskGemini(Action):
     def name(self) -> str:
