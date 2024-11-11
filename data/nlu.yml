@@ -1,6 +1,11 @@
 version: "3.1"
 
 nlu:
+
+- regex: g_question
+  examples: |
+    - .*g$
+
 - intent: diagnose_autism
   examples: |
     - Como saber se meu [filho](family_member) tem autismo?
@@ -150,13 +155,58 @@ nlu:
 
 - intent: nlu_fallback
   examples: |
-    - Qual é o sentido da vida?
-    - O que é a vida?
-    - Fale sobre o universo
-    - Qual é o propósito da existência?
-    - Como funciona a gravidade?
-    - Quem descobriu o fogo?
-    - Me conte uma piada
+    - Qual é o sentido da vida?g
+    - O que é a vida?g
+    - Fale sobre o universo g
+    - Qual é o propósito da existência?g
+    - Como funciona a gravidade?g
+    - Quem descobriu o fogo?g
+    - Me conte uma piada g
+    - Qual é o maior animal do mundo?g
+    - Como funciona um motor?g
+    - Por que o céu é azul?g
+    - Qual é a capital do Brasil?g
+    - Como posso aprender a programar?g
+    - O que significa inteligência artificial?g
+    - Qual é o maior país do mundo?g
+    - Quem inventou a roda?g
+    - Quantos planetas existem no sistema solar?g
+    - Como faço para aprender a cozinhar?g
+    - O que é amor?g
+    - Por que as folhas são verdes?g
+    - Quem foi Albert Einstein?g
+    - Como funciona a eletricidade?g
+    - O que é um buraco negro?g
+    - Quem é o presidente dos Estados Unidos?g
+    - Onde fica a Torre Eiffel?g
+    - Quantos continentes existem?g
+    - O que é a teoria da relatividade?g
+    - Como funciona um avião?g
+    - Qual é o objetivo da filosofia?g
+    - Quem escreveu "Dom Quixote"?g
+    - Como faço para economizar dinheiro?g
+    - O que é um arco-íris?g
+    - Qual é a temperatura mais alta registrada?g
+    - Quem inventou a internet?g
+    - Como é feito o chocolate?g
+    - O que é um eclipse solar?g
+    - Qual é a profundidade do oceano?g
+    - Como posso melhorar minha memória?g
+    - Quem foi Leonardo da Vinci?g
+    - Por que os pássaros voam?g
+    - O que significa sustentabilidade?g
+    - Como faço para plantar uma árvore?g
+    - O que é energia renovável?g
+    - Qual é o maior deserto do mundo?g
+    - Quem escreveu "Hamlet"?g
+    - Como funciona um computador?g
+    - Por que a água é molhada?g
+    - O que é uma constelação?g
+    - Qual é o menor país do mundo?g
+    - Como funciona a blockchain?g
+    - Por que o vento sopra?g
+    - Quem foi Nelson Mandela?g
+
 
 # outros intents
 
